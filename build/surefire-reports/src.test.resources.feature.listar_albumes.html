@@ -45,7 +45,7 @@
   .embed img { width: 100%; }
 </style>
 
-<title>src.test.resources.feature.registrar_usuario</title>
+<title>src.test.resources.feature.listar_albumes</title>
 <script>window.onload = function() {
   var possibleModes = ['failed', 'skipped', 'passed'];
   var tests = {};
@@ -168,401 +168,462 @@
 </img><div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario Outline: [1.1:31]</span><span class="scenario-name">Registro de usuario exitoso</span>
+<span class="scenario-keyword">Scenario: [1:11]</span><span class="scenario-name">Listar albumes con usuario regular exitoso</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.003676</div>
+<div class="time-cell passed">0.004349</div>
 </div>
-<div class="preformatted">22:33:52.500 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="preformatted">17:13:18.993 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
 <div class="step-row">
 <div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.00196</div>
+<div class="time-cell passed">0.002037</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* def jsonUsuario =</div>
-<div class="time-cell passed">0.055148</div>
+<div class="step-cell passed">* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')</div>
+<div class="time-cell passed">3.971896</div>
 </div>
-<div class="preformatted">{
-email: "hernan00@wolox.com.ar",
-password: "Hernan123",
-firstName: "Hernan",
-lastName: "Garcia"
-}</div>
 <div class="step-row">
-<div class="step-cell passed">Given url urlBase + 'users'</div>
-<div class="time-cell passed">0.005562</div>
+<div class="step-cell passed">autenticar_usuario.feature</div>
+<div class="time-cell passed">3.817884</div>
+</div>
+<div class="scenario-steps-nested">
+<div class="step-row">
+<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
+<div class="time-cell passed">0.010813</div>
+</div>
+<div class="preformatted">17:13:19.106 scenario called at line: 27 by tag: @ExitosoRegular</div>
+<div class="step-row">
+<div class="step-cell passed">* def headerContentType = 'application/json'</div>
+<div class="time-cell passed">0.000208</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123}</div>
+<div class="time-cell passed">0.119009</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'users/sessions/'</div>
+<div class="time-cell passed">0.005895</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
-<div class="time-cell passed">0.000133</div>
+<div class="time-cell passed">0.000145</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And request jsonUsuario</div>
-<div class="time-cell passed">0.000024</div>
+<div class="step-cell passed">And request jsonLogin</div>
+<div class="time-cell passed">0.000022</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method post</div>
-<div class="time-cell passed">1.605415</div>
+<div class="time-cell passed">3.223401</div>
 </div>
-<div class="preformatted">22:33:53.196 request:
-1 &gt; POST https://nodejs-qa-training.herokuapp.com/users
+<div class="preformatted">17:13:20.929 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Content-Length: 97
+1 &gt; Content-Length: 56
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Host: nodejs-qa-training.herokuapp.com
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-{"email":"hernan00@wolox.com.ar","password":"Hernan123","firstName":"Hernan","lastName":"Garcia"}
+{"email":"hernan00@wolox.com.ar","password":"Hernan123"}
 
-22:33:54.185 response time in milliseconds: 986,43
-1 &lt; 201
+17:13:22.479 response time in milliseconds: 1542,43
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwMzUyMDIuOTk0LCJleHAiOjE2MDAwMzcwMDIuOTk0fQ.XoUqzlUdk7w5pKnwOxHrQFe1ZkAFMsbL_EvprRdgolc
 1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 15
+1 &lt; Content-Length: 51
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 13 Sep 2020 03:33:55 GMT
-1 &lt; Etag: W/"f-sahJASGt4kbYkrD6HzmOux3X1mU"
+1 &lt; Date: Sun, 13 Sep 2020 22:13:22 GMT
+1 &lt; Etag: W/"33-eEZw/pnY6GqWgEqCIOd17iB/s+8"
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"user_id":258}</div>
+{"user_id":258,"token_expires_at":"1600037002.994"}</div>
 <div class="step-row">
-<div class="step-cell passed">Then status 201</div>
-<div class="time-cell passed">0.000026</div>
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000045</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* print response</div>
-<div class="time-cell passed">0.000758</div>
+<div class="time-cell passed">0.002602</div>
 </div>
-<div class="preformatted">22:33:54.187 [print] {
-  "user_id": 258
+<div class="preformatted">17:13:22.486 [print] {
+  "user_id": 258,
+  "token_expires_at": "1600037002.994"
 }</div>
 <div class="step-row">
-<div class="step-cell passed">And match response contains {user_id: '#notnull'}</div>
-<div class="time-cell passed">0.00247</div>
+<div class="step-cell passed">* print responseHeaders['Authorization'][0]</div>
+<div class="time-cell passed">0.284343</div>
 </div>
-</div>
-<div class="scenario">
-<div class="scenario-heading">
-<span class="scenario-keyword">Scenario Outline: [2.1:54]</span><span class="scenario-name">Registro de usuario escenarios alternos</span>
+<div class="preformatted">17:13:22.772 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwMzUyMDIuOTk0LCJleHAiOjE2MDAwMzcwMDIuOTk0fQ.XoUqzlUdk7w5pKnwOxHrQFe1ZkAFMsbL_EvprRdgolc</div>
+<div class="step-row">
+<div class="step-cell passed">And match response.user_id == "#number"</div>
+<div class="time-cell passed">0.142482</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.000205</div>
-</div>
-<div class="preformatted">22:33:54.206 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
-<div class="step-row">
-<div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.000201</div>
+<div class="step-cell passed">And match response contains read('../json/formato_autenticacion.json')</div>
+<div class="time-cell passed">0.01839</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* def jsonUsuario =</div>
-<div class="time-cell passed">0.000285</div>
+<div class="step-cell passed">And match responseHeaders['Authorization'][0] == "#notnull"</div>
+<div class="time-cell passed">0.010529</div>
 </div>
-<div class="preformatted">{
-"email": "hernan01@wolox.com.co",
-"password": "Herna1**",
-"firstName": "Hernan",
-"lastName": "Garcia"
-}</div>
+</div>
 <div class="step-row">
-<div class="step-cell passed">Given url urlBase + 'users'</div>
-<div class="time-cell passed">0.000608</div>
+<div class="step-cell passed">* def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</div>
+<div class="time-cell passed">0.009231</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'albums'</div>
+<div class="time-cell passed">0.003722</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
-<div class="time-cell passed">0.000027</div>
+<div class="time-cell passed">0.000031</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And request jsonUsuario</div>
-<div class="time-cell passed">0.00001</div>
+<div class="step-cell passed">And header Authorization = varAuthorization</div>
+<div class="time-cell passed">0.000015</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">When method post</div>
-<div class="time-cell passed">0.463272</div>
+<div class="step-cell passed">When method get</div>
+<div class="time-cell passed">0.439807</div>
 </div>
-<div class="preformatted">22:33:54.211 request:
-1 &gt; POST https://nodejs-qa-training.herokuapp.com/users
+<div class="preformatted">17:13:23.021 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
 1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwMzUyMDIuOTk0LCJleHAiOjE2MDAwMzcwMDIuOTk0fQ.XoUqzlUdk7w5pKnwOxHrQFe1ZkAFMsbL_EvprRdgolc
 1 &gt; Connection: Keep-Alive
-1 &gt; Content-Length: 96
-1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Type: application/json
 1 &gt; Host: nodejs-qa-training.herokuapp.com
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-{"email":"hernan01@wolox.com.co","password":"Herna1**","firstName":"Hernan","lastName":"Garcia"}
 
-22:33:54.671 response time in milliseconds: 456,89
-1 &lt; 422
+17:13:23.441 response time in milliseconds: 412,27
+1 &lt; 200
 1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 123
+1 &lt; Content-Length: 7032
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 13 Sep 2020 03:33:56 GMT
-1 &lt; Etag: W/"7b-KbkHGOxF4/K7sQ+BsAfALoN/ET8"
+1 &lt; Date: Sun, 13 Sep 2020 22:13:24 GMT
+1 &lt; Etag: W/"1b78-QLaE6RpZ5E8d2hLg+o5PqJk5Zw8"
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"errors":[{"code":"validation_error","message":"The email must be @wolox.com.ar"}],"timestamp":"2020-09-13T03:33:56.025Z"}</div>
+[{"user_id":1,"id":1,"title":"quidem molestiae enim"},{"user_id":1,"id":2,"title":"sunt qui excepturi placeat culpa"},{"user_id":1,"id":3,"title":"omnis laborum odio"},{"user_id":1,"id":4,"title":"non esse culpa molestiae omnis sed optio"},{"user_id":1,"id":5,"title":"eaque aut omnis a"},{"user_id":1,"id":6,"title":"natus impedit quibusdam illo est"},{"user_id":1,"id":7,"title":"quibusdam autem aliquid et et quia"},{"user_id":1,"id":8,"title":"qui fuga est a eum"},{"user_id":1,"id":9,"title":"saepe unde necessitatibus rem"},{"user_id":1,"id":10,"title":"distinctio laborum qui"},{"user_id":2,"id":11,"title":"quam nostrum impedit mollitia quod et dolor"},{"user_id":2,"id":12,"title":"consequatur autem doloribus natus consectetur"},{"user_id":2,"id":13,"title":"ab rerum non rerum consequatur ut ea unde"},{"user_id":2,"id":14,"title":"ducimus molestias eos animi atque nihil"},{"user_id":2,"id":15,"title":"ut pariatur rerum ipsum natus repellendus praesentium"},{"user_id":2,"id":16,"title":"voluptatem aut maxime inventore autem magnam atque repellat"},{"user_id":2,"id":17,"title":"aut minima voluptatem ut velit"},{"user_id":2,"id":18,"title":"nesciunt quia et doloremque"},{"user_id":2,"id":19,"title":"velit pariatur quaerat similique libero omnis quia"},{"user_id":2,"id":20,"title":"voluptas rerum iure ut enim"},{"user_id":3,"id":21,"title":"repudiandae voluptatem optio est consequatur rem in temporibus et"},{"user_id":3,"id":22,"title":"et rem non provident vel ut"},{"user_id":3,"id":23,"title":"incidunt quisquam hic adipisci sequi"},{"user_id":3,"id":24,"title":"dolores ut et facere placeat"},{"user_id":3,"id":25,"title":"vero maxime id possimus sunt neque et consequatur"},{"user_id":3,"id":26,"title":"quibusdam saepe ipsa vel harum"},{"user_id":3,"id":27,"title":"id non nostrum expedita"},{"user_id":3,"id":28,"title":"omnis neque exercitationem sed dolor atque maxime aut cum"},{"user_id":3,"id":29,"title":"inventore ut quasi magnam itaque est fugit"},{"user_id":3,"id":30,"title":"tempora assumenda et similique odit distinctio error"},{"user_id":4,"id":31,"title":"adipisci laborum fuga laboriosam"},{"user_id":4,"id":32,"title":"reiciendis dolores a ut qui debitis non quo labore"},{"user_id":4,"id":33,"title":"iste eos nostrum"},{"user_id":4,"id":34,"title":"cumque voluptatibus rerum architecto blanditiis"},{"user_id":4,"id":35,"title":"et impedit nisi quae magni necessitatibus sed aut pariatur"},{"user_id":4,"id":36,"title":"nihil cupiditate voluptate neque"},{"user_id":4,"id":37,"title":"est placeat dicta ut nisi rerum iste"},{"user_id":4,"id":38,"title":"unde a sequi id"},{"user_id":4,"id":39,"title":"ratione porro illum labore eum aperiam sed"},{"user_id":4,"id":40,"title":"voluptas neque et sint aut quo odit"},{"user_id":5,"id":41,"title":"ea voluptates maiores eos accusantium officiis tempore mollitia consequatur"},{"user_id":5,"id":42,"title":"tenetur explicabo ea"},{"user_id":5,"id":43,"title":"aperiam doloremque nihil"},{"user_id":5,"id":44,"title":"sapiente cum numquam officia consequatur vel natus quos suscipit"},{"user_id":5,"id":45,"title":"tenetur quos ea unde est enim corrupti qui"},{"user_id":5,"id":46,"title":"molestiae voluptate non"},{"user_id":5,"id":47,"title":"temporibus molestiae aut"},{"user_id":5,"id":48,"title":"modi consequatur culpa aut quam soluta alias perspiciatis laudantium"},{"user_id":5,"id":49,"title":"ut aut vero repudiandae voluptas ullam voluptas at consequatur"},{"user_id":5,"id":50,"title":"sed qui sed quas sit ducimus dolor"},{"user_id":6,"id":51,"title":"odit laboriosam sint quia cupiditate animi quis"},{"user_id":6,"id":52,"title":"necessitatibus quas et sunt at voluptatem"},{"user_id":6,"id":53,"title":"est vel sequi voluptatem nemo quam molestiae modi enim"},{"user_id":6,"id":54,"title":"aut non illo amet perferendis"},{"user_id":6,"id":55,"title":"qui culpa itaque omnis in nesciunt architecto error"},{"user_id":6,"id":56,"title":"omnis qui maiores tempora officiis omnis rerum sed repellat"},{"user_id":6,"id":57,"title":"libero excepturi voluptatem est architecto quae voluptatum officia tempora"},{"user_id":6,"id":58,"title":"nulla illo consequatur aspernatur veritatis aut error delectus et"},{"user_id":6,"id":59,"title":"eligendi similique provident nihil"},{"user_id":6,"id":60,"title":"omnis mollitia sunt aliquid eum consequatur fugit minus laudantium"},{"user_id":7,"id":61,"title":"delectus iusto et"},{"user_id":7,"id":62,"title":"eos ea non recusandae iste ut quasi"},{"user_id":7,"id":63,"title":"velit est quam"},{"user_id":7,"id":64,"title":"autem voluptatem amet iure quae"},{"user_id":7,"id":65,"title":"voluptates delectus iure iste qui"},{"user_id":7,"id":66,"title":"velit sed quia dolor dolores delectus"},{"user_id":7,"id":67,"title":"ad voluptas nostrum et nihil"},{"user_id":7,"id":68,"title":"qui quasi nihil aut voluptatum sit dolore minima"},{"user_id":7,"id":69,"title":"qui aut est"},{"user_id":7,"id":70,"title":"et deleniti unde"},{"user_id":8,"id":71,"title":"et vel corporis"},{"user_id":8,"id":72,"title":"unde exercitationem ut"},{"user_id":8,"id":73,"title":"quos omnis officia"},{"user_id":8,"id":74,"title":"quia est eius vitae dolor"},{"user_id":8,"id":75,"title":"aut quia expedita non"},{"user_id":8,"id":76,"title":"dolorem magnam facere itaque ut reprehenderit tenetur corrupti"},{"user_id":8,"id":77,"title":"cupiditate sapiente maiores iusto ducimus cum excepturi veritatis quia"},{"user_id":8,"id":78,"title":"est minima eius possimus ea ratione velit et"},{"user_id":8,"id":79,"title":"ipsa quae voluptas natus ut suscipit soluta quia quidem"},{"user_id":8,"id":80,"title":"id nihil reprehenderit"},{"user_id":9,"id":81,"title":"quibusdam sapiente et"},{"user_id":9,"id":82,"title":"recusandae consequatur vel amet unde"},{"user_id":9,"id":83,"title":"aperiam odio fugiat"},{"user_id":9,"id":84,"title":"est et at eos expedita"},{"user_id":9,"id":85,"title":"qui voluptatem consequatur aut ab quis temporibus praesentium"},{"user_id":9,"id":86,"title":"eligendi mollitia alias aspernatur vel ut iusto"},{"user_id":9,"id":87,"title":"aut aut architecto"},{"user_id":9,"id":88,"title":"quas perspiciatis optio"},{"user_id":9,"id":89,"title":"sit optio id voluptatem est eum et"},{"user_id":9,"id":90,"title":"est vel dignissimos"},{"user_id":10,"id":91,"title":"repellendus praesentium debitis officiis"},{"user_id":10,"id":92,"title":"incidunt et et eligendi assumenda soluta quia recusandae"},{"user_id":10,"id":93,"title":"nisi qui dolores perspiciatis"},{"user_id":10,"id":94,"title":"quisquam a dolores et earum vitae"},{"user_id":10,"id":95,"title":"consectetur vel rerum qui aperiam modi eos aspernatur ipsa"},{"user_id":10,"id":96,"title":"unde et ut molestiae est molestias voluptatem sint"},{"user_id":10,"id":97,"title":"est quod aut"},{"user_id":10,"id":98,"title":"omnis quia possimus nesciunt deleniti assumenda sed autem"},{"user_id":10,"id":99,"title":"consectetur ut id impedit dolores sit ad ex aut"},{"user_id":10,"id":100,"title":"enim repellat iste"}]</div>
 <div class="step-row">
-<div class="step-cell passed">Then status 422</div>
-<div class="time-cell passed">0.000023</div>
-</div>
-<div class="step-row">
-<div class="step-cell passed">* print response</div>
-<div class="time-cell passed">0.002153</div>
-</div>
-<div class="preformatted">22:33:54.675 [print] {
-  "errors": [
-    {
-      "code": "validation_error",
-      "message": "The email must be @wolox.com.ar"
-    }
-  ],
-  "timestamp": "2020-09-13T03:33:56.025Z"
-}</div>
-<div class="step-row">
-<div class="step-cell passed">And match response == read('../json/formato_error.json')</div>
-<div class="time-cell passed">0.018085</div>
-</div>
-<div class="step-row">
-<div class="step-cell passed">And match response.errors[0].message contains "The email must be @wolox.com.ar"</div>
-<div class="time-cell passed">0.006997</div>
-</div>
-</div>
-<div class="scenario">
-<div class="scenario-heading">
-<span class="scenario-keyword">Scenario Outline: [2.2:55]</span><span class="scenario-name">Registro de usuario escenarios alternos</span>
-</div>
-<div class="step-row">
-<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.000215</div>
-</div>
-<div class="preformatted">22:33:54.714 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
-<div class="step-row">
-<div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.000143</div>
-</div>
-<div class="step-row">
-<div class="step-cell passed">* def jsonUsuario =</div>
-<div class="time-cell passed">0.000206</div>
-</div>
-<div class="preformatted">{
-"email": "hernan02@wolox.com.ar",
-"password": "Herna1**",
-"firstName": "Hernan01",
-"lastName": "Garcia"
-}</div>
-<div class="step-row">
-<div class="step-cell passed">Given url urlBase + 'users'</div>
-<div class="time-cell passed">0.000597</div>
-</div>
-<div class="step-row">
-<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="step-cell passed">Then status 200</div>
 <div class="time-cell passed">0.000017</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And request jsonUsuario</div>
-<div class="time-cell passed">0.000006</div>
+<div class="step-cell passed">* def objeto = read('../json/formato_albumes.json')</div>
+<div class="time-cell passed">0.011102</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">When method post</div>
-<div class="time-cell passed">0.504964</div>
-</div>
-<div class="preformatted">22:33:54.717 request:
-1 &gt; POST https://nodejs-qa-training.herokuapp.com/users
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Content-Length: 98
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Host: nodejs-qa-training.herokuapp.com
-1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-{"email":"hernan02@wolox.com.ar","password":"Herna1**","firstName":"Hernan01","lastName":"Garcia"}
-
-22:33:55.220 response time in milliseconds: 502,32
-1 &lt; 201
-1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 15
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 13 Sep 2020 03:33:56 GMT
-1 &lt; Etag: W/"f-kssdIA7s3VFGukbVVsNqbgzLCsk"
-1 &lt; Server: Cowboy
-1 &lt; Via: 1.1 vegur
-1 &lt; X-Powered-By: Express
-{"user_id":259}</div>
-<div class="step-row">
-<div class="step-cell failed">Then status 422</div>
-<div class="time-cell failed">0.000519</div>
-</div>
-<div class="preformatted">22:33:55.221 status code was: 201, expected: 422, response time: 502, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":259}
-registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 502, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":259}</div>
-<div class="step-row">
-<div class="step-cell skipped">* print response</div>
-<div class="time-cell skipped">0</div>
-</div>
-<div class="step-row">
-<div class="step-cell skipped">And match response == read('../json/formato_error.json')</div>
-<div class="time-cell skipped">0</div>
-</div>
-<div class="step-row">
-<div class="step-cell skipped">And match response.errors[0].message contains "first_name"</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">And match each response contains objeto</div>
+<div class="time-cell passed">0.004944</div>
 </div>
 </div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario Outline: [2.3:56]</span><span class="scenario-name">Registro de usuario escenarios alternos</span>
+<span class="scenario-keyword">Scenario: [2:22]</span><span class="scenario-name">Listar albumes con usuario administrador exitoso</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.000229</div>
+<div class="time-cell passed">0.000705</div>
 </div>
-<div class="preformatted">22:33:55.234 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="preformatted">17:13:23.497 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
 <div class="step-row">
 <div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.000156</div>
+<div class="time-cell passed">0.000943</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* def jsonUsuario =</div>
-<div class="time-cell passed">0.000252</div>
+<div class="step-cell passed">* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoAdministrador')</div>
+<div class="time-cell passed">0.804844</div>
 </div>
-<div class="preformatted">{
-"email": "hernan03@wolox.com.ar",
-"password": "Herna1**",
-"firstName": "Hernan",
-"lastName": "Garcia 98"
-}</div>
 <div class="step-row">
-<div class="step-cell passed">Given url urlBase + 'users'</div>
-<div class="time-cell passed">0.000563</div>
+<div class="step-cell passed">autenticar_usuario.feature</div>
+<div class="time-cell passed">0.567042</div>
+</div>
+<div class="scenario-steps-nested">
+<div class="step-row">
+<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
+<div class="time-cell passed">0.012041</div>
+</div>
+<div class="preformatted">17:13:23.675 scenario called at line: 45 by tag: @ExitosoAdministrador</div>
+<div class="step-row">
+<div class="step-cell passed">* def headerContentType = 'application/json'</div>
+<div class="time-cell passed">0.000354</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* json jsonLogin = {"email": admin@wolox.com.ar, "password": candidatoWolox2020}</div>
+<div class="time-cell passed">0.000727</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'users/sessions/'</div>
+<div class="time-cell passed">0.001215</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000061</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And request jsonLogin</div>
 <div class="time-cell passed">0.000024</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And request jsonUsuario</div>
-<div class="time-cell passed">0.000008</div>
-</div>
-<div class="step-row">
 <div class="step-cell passed">When method post</div>
-<div class="time-cell passed">0.48162</div>
+<div class="time-cell passed">0.532584</div>
 </div>
-<div class="preformatted">22:33:55.238 request:
-1 &gt; POST https://nodejs-qa-training.herokuapp.com/users
+<div class="preformatted">17:13:23.854 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Content-Length: 99
+1 &gt; Content-Length: 62
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Host: nodejs-qa-training.herokuapp.com
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-{"email":"hernan03@wolox.com.ar","password":"Herna1**","firstName":"Hernan","lastName":"Garcia 98"}
+{"email":"admin@wolox.com.ar","password":"candidatoWolox2020"}
 
-22:33:55.718 response time in milliseconds: 478,82
-1 &lt; 201
+17:13:24.381 response time in milliseconds: 525,37
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDM1MjA1LjE3OSwiZXhwIjoxNjAwMDM3MDA1LjE3OX0.JbOA5JWdg89xWGaeNlSyR_p_s2VXnn-tDSv1vz0VHOQ
 1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 15
+1 &lt; Content-Length: 51
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 13 Sep 2020 03:33:57 GMT
-1 &lt; Etag: W/"f-+dTKH7Y36drc5MqcOvGXxHkJNa4"
+1 &lt; Date: Sun, 13 Sep 2020 22:13:25 GMT
+1 &lt; Etag: W/"33-+trfaQo/0neiofbZYFcBQpSMURo"
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"user_id":260}</div>
+{"user_id":146,"token_expires_at":"1600037005.179"}</div>
 <div class="step-row">
-<div class="step-cell failed">Then status 422</div>
-<div class="time-cell failed">0.000703</div>
-</div>
-<div class="preformatted">22:33:55.718 status code was: 201, expected: 422, response time: 479, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":260}
-registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 479, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":260}</div>
-<div class="step-row">
-<div class="step-cell skipped">* print response</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000029</div>
 </div>
 <div class="step-row">
-<div class="step-cell skipped">And match response == read('../json/formato_error.json')</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">* print response</div>
+<div class="time-cell passed">0.001342</div>
+</div>
+<div class="preformatted">17:13:24.384 [print] {
+  "user_id": 146,
+  "token_expires_at": "1600037005.179"
+}</div>
+<div class="step-row">
+<div class="step-cell passed">* print responseHeaders['Authorization'][0]</div>
+<div class="time-cell passed">0.003094</div>
+</div>
+<div class="preformatted">17:13:24.387 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDM1MjA1LjE3OSwiZXhwIjoxNjAwMDM3MDA1LjE3OX0.JbOA5JWdg89xWGaeNlSyR_p_s2VXnn-tDSv1vz0VHOQ</div>
+<div class="step-row">
+<div class="step-cell passed">And match response.user_id == "#number"</div>
+<div class="time-cell passed">0.001891</div>
 </div>
 <div class="step-row">
-<div class="step-cell skipped">And match response.errors[0].message contains "last_name"</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">And match response contains read('../json/formato_autenticacion.json')</div>
+<div class="time-cell passed">0.012221</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match responseHeaders['Authorization'][0] == "#notnull"</div>
+<div class="time-cell passed">0.00146</div>
+</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</div>
+<div class="time-cell passed">0.00179</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'albums'</div>
+<div class="time-cell passed">0.001029</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000029</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Authorization = varAuthorization</div>
+<div class="time-cell passed">0.000018</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method get</div>
+<div class="time-cell passed">0.400183</div>
+</div>
+<div class="preformatted">17:13:24.430 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDM1MjA1LjE3OSwiZXhwIjoxNjAwMDM3MDA1LjE3OX0.JbOA5JWdg89xWGaeNlSyR_p_s2VXnn-tDSv1vz0VHOQ
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+17:13:24.822 response time in milliseconds: 391,57
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 7032
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sun, 13 Sep 2020 22:13:25 GMT
+1 &lt; Etag: W/"1b78-QLaE6RpZ5E8d2hLg+o5PqJk5Zw8"
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+[{"user_id":1,"id":1,"title":"quidem molestiae enim"},{"user_id":1,"id":2,"title":"sunt qui excepturi placeat culpa"},{"user_id":1,"id":3,"title":"omnis laborum odio"},{"user_id":1,"id":4,"title":"non esse culpa molestiae omnis sed optio"},{"user_id":1,"id":5,"title":"eaque aut omnis a"},{"user_id":1,"id":6,"title":"natus impedit quibusdam illo est"},{"user_id":1,"id":7,"title":"quibusdam autem aliquid et et quia"},{"user_id":1,"id":8,"title":"qui fuga est a eum"},{"user_id":1,"id":9,"title":"saepe unde necessitatibus rem"},{"user_id":1,"id":10,"title":"distinctio laborum qui"},{"user_id":2,"id":11,"title":"quam nostrum impedit mollitia quod et dolor"},{"user_id":2,"id":12,"title":"consequatur autem doloribus natus consectetur"},{"user_id":2,"id":13,"title":"ab rerum non rerum consequatur ut ea unde"},{"user_id":2,"id":14,"title":"ducimus molestias eos animi atque nihil"},{"user_id":2,"id":15,"title":"ut pariatur rerum ipsum natus repellendus praesentium"},{"user_id":2,"id":16,"title":"voluptatem aut maxime inventore autem magnam atque repellat"},{"user_id":2,"id":17,"title":"aut minima voluptatem ut velit"},{"user_id":2,"id":18,"title":"nesciunt quia et doloremque"},{"user_id":2,"id":19,"title":"velit pariatur quaerat similique libero omnis quia"},{"user_id":2,"id":20,"title":"voluptas rerum iure ut enim"},{"user_id":3,"id":21,"title":"repudiandae voluptatem optio est consequatur rem in temporibus et"},{"user_id":3,"id":22,"title":"et rem non provident vel ut"},{"user_id":3,"id":23,"title":"incidunt quisquam hic adipisci sequi"},{"user_id":3,"id":24,"title":"dolores ut et facere placeat"},{"user_id":3,"id":25,"title":"vero maxime id possimus sunt neque et consequatur"},{"user_id":3,"id":26,"title":"quibusdam saepe ipsa vel harum"},{"user_id":3,"id":27,"title":"id non nostrum expedita"},{"user_id":3,"id":28,"title":"omnis neque exercitationem sed dolor atque maxime aut cum"},{"user_id":3,"id":29,"title":"inventore ut quasi magnam itaque est fugit"},{"user_id":3,"id":30,"title":"tempora assumenda et similique odit distinctio error"},{"user_id":4,"id":31,"title":"adipisci laborum fuga laboriosam"},{"user_id":4,"id":32,"title":"reiciendis dolores a ut qui debitis non quo labore"},{"user_id":4,"id":33,"title":"iste eos nostrum"},{"user_id":4,"id":34,"title":"cumque voluptatibus rerum architecto blanditiis"},{"user_id":4,"id":35,"title":"et impedit nisi quae magni necessitatibus sed aut pariatur"},{"user_id":4,"id":36,"title":"nihil cupiditate voluptate neque"},{"user_id":4,"id":37,"title":"est placeat dicta ut nisi rerum iste"},{"user_id":4,"id":38,"title":"unde a sequi id"},{"user_id":4,"id":39,"title":"ratione porro illum labore eum aperiam sed"},{"user_id":4,"id":40,"title":"voluptas neque et sint aut quo odit"},{"user_id":5,"id":41,"title":"ea voluptates maiores eos accusantium officiis tempore mollitia consequatur"},{"user_id":5,"id":42,"title":"tenetur explicabo ea"},{"user_id":5,"id":43,"title":"aperiam doloremque nihil"},{"user_id":5,"id":44,"title":"sapiente cum numquam officia consequatur vel natus quos suscipit"},{"user_id":5,"id":45,"title":"tenetur quos ea unde est enim corrupti qui"},{"user_id":5,"id":46,"title":"molestiae voluptate non"},{"user_id":5,"id":47,"title":"temporibus molestiae aut"},{"user_id":5,"id":48,"title":"modi consequatur culpa aut quam soluta alias perspiciatis laudantium"},{"user_id":5,"id":49,"title":"ut aut vero repudiandae voluptas ullam voluptas at consequatur"},{"user_id":5,"id":50,"title":"sed qui sed quas sit ducimus dolor"},{"user_id":6,"id":51,"title":"odit laboriosam sint quia cupiditate animi quis"},{"user_id":6,"id":52,"title":"necessitatibus quas et sunt at voluptatem"},{"user_id":6,"id":53,"title":"est vel sequi voluptatem nemo quam molestiae modi enim"},{"user_id":6,"id":54,"title":"aut non illo amet perferendis"},{"user_id":6,"id":55,"title":"qui culpa itaque omnis in nesciunt architecto error"},{"user_id":6,"id":56,"title":"omnis qui maiores tempora officiis omnis rerum sed repellat"},{"user_id":6,"id":57,"title":"libero excepturi voluptatem est architecto quae voluptatum officia tempora"},{"user_id":6,"id":58,"title":"nulla illo consequatur aspernatur veritatis aut error delectus et"},{"user_id":6,"id":59,"title":"eligendi similique provident nihil"},{"user_id":6,"id":60,"title":"omnis mollitia sunt aliquid eum consequatur fugit minus laudantium"},{"user_id":7,"id":61,"title":"delectus iusto et"},{"user_id":7,"id":62,"title":"eos ea non recusandae iste ut quasi"},{"user_id":7,"id":63,"title":"velit est quam"},{"user_id":7,"id":64,"title":"autem voluptatem amet iure quae"},{"user_id":7,"id":65,"title":"voluptates delectus iure iste qui"},{"user_id":7,"id":66,"title":"velit sed quia dolor dolores delectus"},{"user_id":7,"id":67,"title":"ad voluptas nostrum et nihil"},{"user_id":7,"id":68,"title":"qui quasi nihil aut voluptatum sit dolore minima"},{"user_id":7,"id":69,"title":"qui aut est"},{"user_id":7,"id":70,"title":"et deleniti unde"},{"user_id":8,"id":71,"title":"et vel corporis"},{"user_id":8,"id":72,"title":"unde exercitationem ut"},{"user_id":8,"id":73,"title":"quos omnis officia"},{"user_id":8,"id":74,"title":"quia est eius vitae dolor"},{"user_id":8,"id":75,"title":"aut quia expedita non"},{"user_id":8,"id":76,"title":"dolorem magnam facere itaque ut reprehenderit tenetur corrupti"},{"user_id":8,"id":77,"title":"cupiditate sapiente maiores iusto ducimus cum excepturi veritatis quia"},{"user_id":8,"id":78,"title":"est minima eius possimus ea ratione velit et"},{"user_id":8,"id":79,"title":"ipsa quae voluptas natus ut suscipit soluta quia quidem"},{"user_id":8,"id":80,"title":"id nihil reprehenderit"},{"user_id":9,"id":81,"title":"quibusdam sapiente et"},{"user_id":9,"id":82,"title":"recusandae consequatur vel amet unde"},{"user_id":9,"id":83,"title":"aperiam odio fugiat"},{"user_id":9,"id":84,"title":"est et at eos expedita"},{"user_id":9,"id":85,"title":"qui voluptatem consequatur aut ab quis temporibus praesentium"},{"user_id":9,"id":86,"title":"eligendi mollitia alias aspernatur vel ut iusto"},{"user_id":9,"id":87,"title":"aut aut architecto"},{"user_id":9,"id":88,"title":"quas perspiciatis optio"},{"user_id":9,"id":89,"title":"sit optio id voluptatem est eum et"},{"user_id":9,"id":90,"title":"est vel dignissimos"},{"user_id":10,"id":91,"title":"repellendus praesentium debitis officiis"},{"user_id":10,"id":92,"title":"incidunt et et eligendi assumenda soluta quia recusandae"},{"user_id":10,"id":93,"title":"nisi qui dolores perspiciatis"},{"user_id":10,"id":94,"title":"quisquam a dolores et earum vitae"},{"user_id":10,"id":95,"title":"consectetur vel rerum qui aperiam modi eos aspernatur ipsa"},{"user_id":10,"id":96,"title":"unde et ut molestiae est molestias voluptatem sint"},{"user_id":10,"id":97,"title":"est quod aut"},{"user_id":10,"id":98,"title":"omnis quia possimus nesciunt deleniti assumenda sed autem"},{"user_id":10,"id":99,"title":"consectetur ut id impedit dolores sit ad ex aut"},{"user_id":10,"id":100,"title":"enim repellat iste"}]</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000011</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* def objeto = read('../json/formato_albumes.json')</div>
+<div class="time-cell passed">0.006913</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match each response contains objeto</div>
+<div class="time-cell passed">0.001522</div>
 </div>
 </div>
 <div class="scenario">
 <div class="scenario-heading">
-<span class="scenario-keyword">Scenario Outline: [2.4:57]</span><span class="scenario-name">Registro de usuario escenarios alternos</span>
+<span class="scenario-keyword">Scenario: [3:33]</span><span class="scenario-name">Listar albumes escenario alterno</span>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.000228</div>
+<div class="time-cell passed">0.000329</div>
 </div>
-<div class="preformatted">22:33:55.730 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="preformatted">17:13:24.856 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
 <div class="step-row">
 <div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.000204</div>
+<div class="time-cell passed">0.000854</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">* def jsonUsuario =</div>
-<div class="time-cell passed">0.000313</div>
+<div class="step-cell passed">* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')</div>
+<div class="time-cell passed">0.628354</div>
 </div>
-<div class="preformatted">{
-"email": "hernan04@wolox.com.ar",
-"password": "Herna1**",
-"firstName": "Hernan",
-"lastName": "Garcia 98"
-}</div>
 <div class="step-row">
-<div class="step-cell passed">Given url urlBase + 'users'</div>
-<div class="time-cell passed">0.000584</div>
+<div class="step-cell passed">autenticar_usuario.feature</div>
+<div class="time-cell passed">0.580035</div>
+</div>
+<div class="scenario-steps-nested">
+<div class="step-row">
+<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
+<div class="time-cell passed">0.002395</div>
+</div>
+<div class="preformatted">17:13:24.945 scenario called at line: 27 by tag: @ExitosoRegular</div>
+<div class="step-row">
+<div class="step-cell passed">* def headerContentType = 'application/json'</div>
+<div class="time-cell passed">0.000195</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123}</div>
+<div class="time-cell passed">0.000248</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'users/sessions/'</div>
+<div class="time-cell passed">0.000624</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
-<div class="time-cell passed">0.000024</div>
+<div class="time-cell passed">0.000025</div>
 </div>
 <div class="step-row">
-<div class="step-cell passed">And request jsonUsuario</div>
+<div class="step-cell passed">And request jsonLogin</div>
 <div class="time-cell passed">0.000009</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method post</div>
-<div class="time-cell passed">0.502488</div>
+<div class="time-cell passed">0.526507</div>
 </div>
-<div class="preformatted">22:33:55.734 request:
-1 &gt; POST https://nodejs-qa-training.herokuapp.com/users
+<div class="preformatted">17:13:24.953 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Content-Length: 99
+1 &gt; Content-Length: 56
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Host: nodejs-qa-training.herokuapp.com
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-{"email":"hernan04@wolox.com.ar","password":"Herna1**","firstName":"Hernan","lastName":"Garcia 98"}
+{"email":"hernan00@wolox.com.ar","password":"Hernan123"}
 
-22:33:56.235 response time in milliseconds: 499,80
-1 &lt; 201
+17:13:25.477 response time in milliseconds: 521,45
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwMzUyMDYuMjc3LCJleHAiOjE2MDAwMzcwMDYuMjc3fQ.8IDQwVSP3hl_YX9gVtm6ipS4NjQQQ63D0m0sfGniNqk
 1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 15
+1 &lt; Content-Length: 51
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sun, 13 Sep 2020 03:33:57 GMT
-1 &lt; Etag: W/"f-6rrFY+L8zsTw5+pVz4on+7UA3W0"
+1 &lt; Date: Sun, 13 Sep 2020 22:13:26 GMT
+1 &lt; Etag: W/"33-dEuLCCylX06yfq018slOzi9ZGMk"
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"user_id":261}</div>
+{"user_id":258,"token_expires_at":"1600037006.277"}</div>
 <div class="step-row">
-<div class="step-cell failed">Then status 422</div>
-<div class="time-cell failed">0.000366</div>
-</div>
-<div class="preformatted">22:33:56.236 status code was: 201, expected: 422, response time: 500, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":261}
-registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 500, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":261}</div>
-<div class="step-row">
-<div class="step-cell skipped">* print response</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.00003</div>
 </div>
 <div class="step-row">
-<div class="step-cell skipped">And match response == read('../json/formato_error.json')</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">* print response</div>
+<div class="time-cell passed">0.001404</div>
+</div>
+<div class="preformatted">17:13:25.479 [print] {
+  "user_id": 258,
+  "token_expires_at": "1600037006.277"
+}</div>
+<div class="step-row">
+<div class="step-cell passed">* print responseHeaders['Authorization'][0]</div>
+<div class="time-cell passed">0.002101</div>
+</div>
+<div class="preformatted">17:13:25.482 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwMzUyMDYuMjc3LCJleHAiOjE2MDAwMzcwMDYuMjc3fQ.8IDQwVSP3hl_YX9gVtm6ipS4NjQQQ63D0m0sfGniNqk</div>
+<div class="step-row">
+<div class="step-cell passed">And match response.user_id == "#number"</div>
+<div class="time-cell passed">0.001442</div>
 </div>
 <div class="step-row">
-<div class="step-cell skipped">And match response.errors[0].message contains "The resource you are trying to create already exists"</div>
-<div class="time-cell skipped">0</div>
+<div class="step-cell passed">And match response contains read('../json/formato_autenticacion.json')</div>
+<div class="time-cell passed">0.044427</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match responseHeaders['Authorization'][0] == "#notnull"</div>
+<div class="time-cell passed">0.000629</div>
+</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'albums'</div>
+<div class="time-cell passed">0.000828</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000024</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Authorization = 'kadjADAhOLAIyysfhkalsdHKLsdASDADGDFGJD'</div>
+<div class="time-cell passed">0.002813</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method get</div>
+<div class="time-cell passed">0.329369</div>
+</div>
+<div class="preformatted">17:13:25.564 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: kadjADAhOLAIyysfhkalsdHKLsdASDADGDFGJD
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+17:13:25.891 response time in milliseconds: 326,64
+1 &lt; 401
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 109
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sun, 13 Sep 2020 22:13:26 GMT
+1 &lt; Etag: W/"6d-9jvZRAfiHKMutYe/gbJu514CGnA"
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"errors":[{"code":"authentication_error","message":"Invalid token"}],"timestamp":"2020-09-13T22:13:26.703Z"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 401</div>
+<div class="time-cell passed">0.00001</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response contains read('../json/formato_error.json')</div>
+<div class="time-cell passed">0.007258</div>
 </div>
 </div>
 </div>
