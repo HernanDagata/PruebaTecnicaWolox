@@ -18,4 +18,26 @@ Feature: Prueba Invalidar sesion del usuario
     And request {}
     When method post
     Then status 200
-    * print response
+    Given url urlBase + 'albums'
+    And header Content-Type = headerContentType
+    And header Authorization = varAuthorization
+    When method get
+    Then status 401
+    And match response contains read('../json/formato_error.json')
+
+  @ExitosoAdministrador
+  Scenario: Invalidar sesion usuario administrador
+    * def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoAdministrador')
+    * def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]
+    Given url urlBase + 'users/sessions/invalidate_all'
+    And header Content-Type = headerContentType
+    And header Authorization = varAuthorization
+    And request {}
+    When method post
+    Then status 200
+    Given url urlBase + 'albums'
+    And header Content-Type = headerContentType
+    And header Authorization = varAuthorization
+    When method get
+    Then status 401
+    And match response contains read('../json/formato_error.json')

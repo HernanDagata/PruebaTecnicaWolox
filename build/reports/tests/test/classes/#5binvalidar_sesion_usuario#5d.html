@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.640s</div>
+<div class="counter">4.650s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,12 @@
 </thead>
 <tr>
 <td class="success">[1:12] Invalidar sesion usuario regular</td>
-<td class="success">2.640s</td>
+<td class="success">2.947s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2:29] Invalidar sesion usuario administrador</td>
+<td class="success">1.703s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,11 +92,11 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>22:11:25.094 [Test worker] INFO com.intuit.karate - scenario called at line: 27 by tag: @ExitosoRegular
-22:11:25.178 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:25.901 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
-22:11:25.961 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-22:11:25.964 [Test worker] DEBUG com.intuit.karate - request:
+<pre>22:24:11.966 [Test worker] INFO com.intuit.karate - scenario called at line: 27 by tag: @ExitosoRegular
+22:24:12.031 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:12.687 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:12.695 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:12.697 [Test worker] DEBUG com.intuit.karate - request:
 1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
@@ -101,99 +106,99 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
 {&quot;email&quot;:&quot;hernan00@wolox.com.ar&quot;,&quot;password&quot;:&quot;Hernan123&quot;}
 
-22:11:25.967 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
-22:11:25.986 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
-22:11:25.989 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
-22:11:26.060 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/52.200.71.254:443
-22:11:26.061 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/52.200.71.254:443 with timeout 30000
-22:11:26.312 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
-22:11:26.312 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
-22:11:26.316 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
-22:11:26.636 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
-22:11:26.637 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
-22:11:26.637 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-22:11:26.639 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
-22:11:26.639 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
-22:11:26.640 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-22:11:26.650 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53510&lt;-&gt;52.200.71.254:443
-22:11:26.651 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 30000
-22:11:26.652 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/ HTTP/1.1
-22:11:26.652 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
-22:11:26.655 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
-22:11:26.659 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; POST /users/sessions/ HTTP/1.1
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Type: application/json; charset=UTF-8
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Length: 56
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-22:11:26.661 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Accept-Encoding: gzip,deflate
-22:11:26.661 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;POST /users/sessions/ HTTP/1.1[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Length: 56[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
-22:11:26.665 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;{&quot;email&quot;:&quot;hernan00@wolox.com.ar&quot;,&quot;password&quot;:&quot;Hernan123&quot;}&quot;
-22:11:27.020 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
-22:11:27.020 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
-22:11:27.020 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
-22:11:27.021 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
-22:11:27.021 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U[\r][\n]&quot;
-22:11:27.021 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
-22:11:27.021 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Length: 51[\r][\n]&quot;
-22:11:27.022 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Etag: W/&quot;33-op4d1Wf/AZwGkKp5QZUNXKz4LWg&quot;[\r][\n]&quot;
-22:11:27.034 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:11:28 GMT[\r][\n]&quot;
-22:11:27.034 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
-22:11:27.034 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
-22:11:27.038 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600054888.026&quot;}&quot;
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 200 OK
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Server: Cowboy
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Connection: keep-alive
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; X-Powered-By: Express
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Type: application/json; charset=utf-8
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Length: 51
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Etag: W/&quot;33-op4d1Wf/AZwGkKp5QZUNXKz4LWg&quot;
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
-22:11:27.049 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Via: 1.1 vegur
-22:11:27.064 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
-22:11:27.073 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
-22:11:27.077 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
-22:11:27.078 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
-22:11:27.078 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 1109,21
+22:24:12.699 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:12.716 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:12.718 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:12.762 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:12.762 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:13.017 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:13.017 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:13.018 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:13.314 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:13.314 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:13.314 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:13.316 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:13.316 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:13.317 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:13.325 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53690&lt;-&gt;34.235.104.230:443
+22:24:13.326 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 30000
+22:24:13.326 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/ HTTP/1.1
+22:24:13.326 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+22:24:13.327 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; POST /users/sessions/ HTTP/1.1
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Type: application/json; charset=UTF-8
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Length: 56
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:13.332 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:13.334 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;POST /users/sessions/ HTTP/1.1[\r][\n]&quot;
+22:24:13.334 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+22:24:13.334 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Length: 56[\r][\n]&quot;
+22:24:13.334 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:13.335 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:13.335 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:13.335 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:13.335 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:13.335 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;{&quot;email&quot;:&quot;hernan00@wolox.com.ar&quot;,&quot;password&quot;:&quot;Hernan123&quot;}&quot;
+22:24:13.748 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+22:24:13.748 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:13.750 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:13.750 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:13.760 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo[\r][\n]&quot;
+22:24:13.760 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+22:24:13.764 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Length: 51[\r][\n]&quot;
+22:24:13.765 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Etag: W/&quot;33-mutnfXbis1d29pQ986vm7c1bAFs&quot;[\r][\n]&quot;
+22:24:13.765 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:14 GMT[\r][\n]&quot;
+22:24:13.765 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:13.766 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:13.766 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600055654.772&quot;}&quot;
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 200 OK
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Server: Cowboy
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Connection: keep-alive
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; X-Powered-By: Express
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+22:24:13.775 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Type: application/json; charset=utf-8
+22:24:13.777 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Length: 51
+22:24:13.777 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Etag: W/&quot;33-mutnfXbis1d29pQ986vm7c1bAFs&quot;
+22:24:13.777 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:14 GMT
+22:24:13.778 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Via: 1.1 vegur
+22:24:13.784 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:13.797 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:13.797 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+22:24:13.797 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:13.798 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 1095,66
 1 &lt; 200
-1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
 1 &lt; Connection: keep-alive
 1 &lt; Content-Length: 51
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
-1 &lt; Etag: W/&quot;33-op4d1Wf/AZwGkKp5QZUNXKz4LWg&quot;
+1 &lt; Date: Mon, 14 Sep 2020 03:24:14 GMT
+1 &lt; Etag: W/&quot;33-mutnfXbis1d29pQ986vm7c1bAFs&quot;
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600054888.026&quot;}
+{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600055654.772&quot;}
 
-22:11:27.083 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:27.088 [Test worker] INFO com.intuit.karate - [print] {
+22:24:13.804 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:13.807 [Test worker] INFO com.intuit.karate - [print] {
   &quot;user_id&quot;: 258,
-  &quot;token_expires_at&quot;: &quot;1600054888.026&quot;
+  &quot;token_expires_at&quot;: &quot;1600055654.772&quot;
 }
 
-22:11:27.178 [Test worker] INFO com.intuit.karate - [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
-22:11:27.199 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['user_id']
-22:11:27.215 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:27.216 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:27.216 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:27.225 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['Authorization'][0]
-22:11:27.259 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
-22:11:27.262 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
-22:11:27.262 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-22:11:27.262 [Test worker] DEBUG com.intuit.karate - request:
+22:24:13.873 [Test worker] INFO com.intuit.karate - [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+22:24:13.887 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['user_id']
+22:24:13.904 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:13.904 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:13.905 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:13.917 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['Authorization'][0]
+22:24:13.996 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:14.000 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:14.000 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:14.000 [Test worker] DEBUG com.intuit.karate - request:
 1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/invalidate_all
 1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
 1 &gt; Connection: Keep-Alive
 1 &gt; Content-Length: 2
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -201,71 +206,420 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
 {}
 
-22:11:27.264 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
-22:11:27.264 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
-22:11:27.264 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
-22:11:27.265 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/52.200.71.254:443
-22:11:27.265 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/52.200.71.254:443 with timeout 30000
-22:11:27.345 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
-22:11:27.346 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
-22:11:27.346 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
-22:11:27.543 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
-22:11:27.543 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
-22:11:27.544 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-22:11:27.544 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
-22:11:27.544 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
-22:11:27.544 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-22:11:27.545 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53511&lt;-&gt;52.200.71.254:443
-22:11:27.545 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 30000
-22:11:27.546 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/invalidate_all HTTP/1.1
-22:11:27.546 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
-22:11:27.546 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; POST /users/sessions/invalidate_all HTTP/1.1
-22:11:27.548 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Type: application/json; charset=UTF-8
-22:11:27.548 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
-22:11:27.549 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Length: 2
-22:11:27.549 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
-22:11:27.549 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Connection: Keep-Alive
-22:11:27.549 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
-22:11:27.549 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Accept-Encoding: gzip,deflate
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;POST /users/sessions/invalidate_all HTTP/1.1[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Length: 2[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;[\r][\n]&quot;
-22:11:27.549 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;{}&quot;
-22:11:27.663 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
-22:11:27.663 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:11:28 GMT[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Content-Length: 0[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;[\r][\n]&quot;
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; HTTP/1.1 200 OK
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Server: Cowboy
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Connection: keep-alive
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; X-Powered-By: Express
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Content-Length: 0
-22:11:27.664 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Via: 1.1 vegur
-22:11:27.664 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
-22:11:27.664 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
-22:11:27.664 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 0
-22:11:27.668 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
-22:11:27.668 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 405,00
+22:24:14.013 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:14.014 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:14.014 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:14.014 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:14.014 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:14.094 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:14.094 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:14.095 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:14.305 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:14.305 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:14.305 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:14.306 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:14.306 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:14.306 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:14.307 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53691&lt;-&gt;34.235.104.230:443
+22:24:14.307 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 30000
+22:24:14.308 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/invalidate_all HTTP/1.1
+22:24:14.308 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:14.308 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; POST /users/sessions/invalidate_all HTTP/1.1
+22:24:14.309 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Type: application/json; charset=UTF-8
+22:24:14.309 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+22:24:14.309 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Length: 2
+22:24:14.309 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:14.310 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Connection: Keep-Alive
+22:24:14.310 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:14.310 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;POST /users/sessions/invalidate_all HTTP/1.1[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Length: 2[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:14.310 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;{}&quot;
+22:24:14.420 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+22:24:14.420 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:14.420 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:15 GMT[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Content-Length: 0[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:14.421 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; HTTP/1.1 200 OK
+22:24:14.421 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Server: Cowboy
+22:24:14.421 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Connection: keep-alive
+22:24:14.421 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; X-Powered-By: Express
+22:24:14.423 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
+22:24:14.423 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Content-Length: 0
+22:24:14.423 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Via: 1.1 vegur
+22:24:14.424 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:14.424 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:14.424 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 0
+22:24:14.424 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:14.424 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 412,26
 1 &lt; 200
 1 &lt; Connection: keep-alive
 1 &lt; Content-Length: 0
-1 &lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
+1 &lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
 
-22:11:27.672 [Test worker] INFO com.intuit.karate - [print] 
+22:24:14.444 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:14.444 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:14.444 [Test worker] DEBUG com.intuit.karate - request:
+2 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Type: application/json
+2 &gt; Host: nodejs-qa-training.herokuapp.com
+2 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+22:24:14.444 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:14.444 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 2][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:14.444 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:14.444 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:14.444 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:14.521 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:14.522 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:14.523 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:14.707 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:14.707 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:14.708 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:14.708 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:14.708 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:14.708 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:14.708 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53692&lt;-&gt;34.235.104.230:443
+22:24:14.708 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 30000
+22:24:14.708 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request GET /albums HTTP/1.1
+22:24:14.708 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:14.711 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; GET /albums HTTP/1.1
+22:24:14.712 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Content-Type: application/json
+22:24:14.712 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+22:24:14.713 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:14.713 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Connection: Keep-Alive
+22:24:14.713 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:14.713 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:14.713 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;GET /albums HTTP/1.1[\r][\n]&quot;
+22:24:14.713 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Content-Type: application/json[\r][\n]&quot;
+22:24:14.713 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo[\r][\n]&quot;
+22:24:14.713 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:14.714 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:14.714 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:14.714 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:14.714 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:14.829 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;HTTP/1.1 401 Unauthorized[\r][\n]&quot;
+22:24:14.830 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:14.830 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:14.830 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:14.830 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+22:24:14.830 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Content-Length: 109[\r][\n]&quot;
+22:24:14.831 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Etag: W/&quot;6d-tYimnDujuNT8BnXl2tj29w+1MkE&quot;[\r][\n]&quot;
+22:24:14.831 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:15 GMT[\r][\n]&quot;
+22:24:14.831 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:14.831 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:14.831 [Test worker] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;{&quot;errors&quot;:[{&quot;code&quot;:&quot;authentication_error&quot;,&quot;message&quot;:&quot;Invalid token&quot;}],&quot;timestamp&quot;:&quot;2020-09-14T03:24:15.833Z&quot;}&quot;
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; HTTP/1.1 401 Unauthorized
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Server: Cowboy
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Connection: keep-alive
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; X-Powered-By: Express
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Content-Type: application/json; charset=utf-8
+22:24:14.832 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Content-Length: 109
+22:24:14.833 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Etag: W/&quot;6d-tYimnDujuNT8BnXl2tj29w+1MkE&quot;
+22:24:14.833 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
+22:24:14.833 [Test worker] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Via: 1.1 vegur
+22:24:14.833 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:14.833 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+22:24:14.833 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - nodejs-qa-training.herokuapp.com:443 requested authentication
+22:24:14.835 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - Response contains no authentication challenges
+22:24:14.836 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 2][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:14.836 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 0
+22:24:14.837 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 2][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:14.837 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 389,03
+2 &lt; 401
+2 &lt; Connection: keep-alive
+2 &lt; Content-Length: 109
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
+2 &lt; Etag: W/&quot;6d-tYimnDujuNT8BnXl2tj29w+1MkE&quot;
+2 &lt; Server: Cowboy
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+{&quot;errors&quot;:[{&quot;code&quot;:&quot;authentication_error&quot;,&quot;message&quot;:&quot;Invalid token&quot;}],&quot;timestamp&quot;:&quot;2020-09-14T03:24:15.833Z&quot;}
+
+22:24:14.864 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:14.864 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:14.864 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:14.977 [Test worker] INFO com.intuit.karate - scenario called at line: 45 by tag: @ExitosoAdministrador
+22:24:14.997 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.002 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:15.002 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:15.006 [Test worker] DEBUG com.intuit.karate - request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 62
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+{&quot;email&quot;:&quot;admin@wolox.com.ar&quot;,&quot;password&quot;:&quot;candidatoWolox2020&quot;}
+
+22:24:15.007 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:15.008 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:15.008 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:15.008 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:15.008 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:15.085 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:15.085 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:15.086 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:15.278 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:15.278 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53693&lt;-&gt;34.235.104.230:443
+22:24:15.278 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 30000
+22:24:15.278 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/ HTTP/1.1
+22:24:15.280 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+22:24:15.280 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:15.280 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; POST /users/sessions/ HTTP/1.1
+22:24:15.280 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Content-Type: application/json; charset=UTF-8
+22:24:15.281 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Content-Length: 62
+22:24:15.281 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:15.282 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Connection: Keep-Alive
+22:24:15.282 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:15.282 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:15.282 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;POST /users/sessions/ HTTP/1.1[\r][\n]&quot;
+22:24:15.283 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+22:24:15.283 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Content-Length: 62[\r][\n]&quot;
+22:24:15.283 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:15.283 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:15.284 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:15.284 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:15.284 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:15.284 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;{&quot;email&quot;:&quot;admin@wolox.com.ar&quot;,&quot;password&quot;:&quot;candidatoWolox2020&quot;}&quot;
+22:24:15.604 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+22:24:15.604 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:15.604 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:15.604 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Length: 51[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Etag: W/&quot;33-zbMBj+AYFd9l+Z5JYC8pUXtgNoY&quot;[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:16 GMT[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:15.605 [Test worker] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;{&quot;user_id&quot;:146,&quot;token_expires_at&quot;:&quot;1600055656.626&quot;}&quot;
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; HTTP/1.1 200 OK
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Server: Cowboy
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Connection: keep-alive
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; X-Powered-By: Express
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Type: application/json; charset=utf-8
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Length: 51
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Etag: W/&quot;33-zbMBj+AYFd9l+Z5JYC8pUXtgNoY&quot;
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:16 GMT
+22:24:15.607 [Test worker] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Via: 1.1 vegur
+22:24:15.607 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:15.607 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 3][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:15.607 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 0
+22:24:15.607 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 3][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:15.607 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 602,04
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 14 Sep 2020 03:24:16 GMT
+1 &lt; Etag: W/&quot;33-zbMBj+AYFd9l+Z5JYC8pUXtgNoY&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;user_id&quot;:146,&quot;token_expires_at&quot;:&quot;1600055656.626&quot;}
+
+22:24:15.613 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.613 [Test worker] INFO com.intuit.karate - [print] {
+  &quot;user_id&quot;: 146,
+  &quot;token_expires_at&quot;: &quot;1600055656.626&quot;
+}
+
+22:24:15.614 [Test worker] INFO com.intuit.karate - [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+22:24:15.618 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['user_id']
+22:24:15.624 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.624 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.624 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.627 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['Authorization'][0]
+22:24:15.645 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:15.652 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:15.652 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:15.652 [Test worker] DEBUG com.intuit.karate - request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/invalidate_all
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 2
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+{}
+
+22:24:15.656 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:15.656 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 4][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:15.656 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:15.656 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:15.656 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:15.773 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:15.774 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:15.774 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:15.975 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:15.976 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:15.976 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:15.976 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:15.976 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:15.977 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:15.978 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53694&lt;-&gt;34.235.104.230:443
+22:24:15.978 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 30000
+22:24:15.978 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /users/sessions/invalidate_all HTTP/1.1
+22:24:15.978 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; POST /users/sessions/invalidate_all HTTP/1.1
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Content-Type: application/json; charset=UTF-8
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Content-Length: 2
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Connection: Keep-Alive
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:15.978 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:15.978 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;POST /users/sessions/invalidate_all HTTP/1.1[\r][\n]&quot;
+22:24:15.978 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Content-Length: 2[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:15.982 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;{}&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:17 GMT[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Content-Length: 0[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:16.087 [Test worker] DEBUG org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; HTTP/1.1 200 OK
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; Server: Cowboy
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; Connection: keep-alive
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; X-Powered-By: Express
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; Content-Length: 0
+22:24:16.091 [Test worker] DEBUG org.apache.http.headers - http-outgoing-4 &lt;&lt; Via: 1.1 vegur
+22:24:16.091 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:16.091 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 4][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:16.091 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 0
+22:24:16.091 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 4][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:16.091 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 437,65
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 0
+1 &lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+
+22:24:16.099 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+22:24:16.099 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:24:16.103 [Test worker] DEBUG com.intuit.karate - request:
+2 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Type: application/json
+2 &gt; Host: nodejs-qa-training.herokuapp.com
+2 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+22:24:16.103 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+22:24:16.103 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 5][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:16.103 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://nodejs-qa-training.herokuapp.com:443
+22:24:16.107 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to nodejs-qa-training.herokuapp.com/34.235.104.230:443
+22:24:16.107 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to nodejs-qa-training.herokuapp.com/34.235.104.230:443 with timeout 30000
+22:24:16.180 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+22:24:16.184 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+22:24:16.184 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+22:24:16.480 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+22:24:16.481 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+22:24:16.481 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+22:24:16.481 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com, O=&quot;Heroku, Inc.&quot;, L=San Francisco, ST=California, C=US
+22:24:16.481 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com, herokuapp.com]
+22:24:16.481 [Test worker] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+22:24:16.481 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.7:53695&lt;-&gt;34.235.104.230:443
+22:24:16.481 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: set socket timeout to 30000
+22:24:16.481 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request GET /albums HTTP/1.1
+22:24:16.481 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+22:24:16.484 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; GET /albums HTTP/1.1
+22:24:16.484 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; Content-Type: application/json
+22:24:16.484 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+22:24:16.484 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; Host: nodejs-qa-training.herokuapp.com
+22:24:16.485 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; Connection: Keep-Alive
+22:24:16.485 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+22:24:16.485 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &gt;&gt; Accept-Encoding: gzip,deflate
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;GET /albums HTTP/1.1[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;Content-Type: application/json[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;Host: nodejs-qa-training.herokuapp.com[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+22:24:16.485 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &gt;&gt; &quot;[\r][\n]&quot;
+22:24:16.585 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;HTTP/1.1 401 Unauthorized[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Server: Cowboy[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Content-Length: 109[\r][\n]&quot;
+22:24:16.586 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Etag: W/&quot;6d-3xzmEzLDFaL/SeRdPnW3kllP6RQ&quot;[\r][\n]&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Date: Mon, 14 Sep 2020 03:24:17 GMT[\r][\n]&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;[\r][\n]&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.wire - http-outgoing-5 &lt;&lt; &quot;{&quot;errors&quot;:[{&quot;code&quot;:&quot;authentication_error&quot;,&quot;message&quot;:&quot;Invalid token&quot;}],&quot;timestamp&quot;:&quot;2020-09-14T03:24:17.611Z&quot;}&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; HTTP/1.1 401 Unauthorized
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Server: Cowboy
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Connection: keep-alive
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; X-Powered-By: Express
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Content-Type: application/json; charset=utf-8
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Content-Length: 109
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Etag: W/&quot;6d-3xzmEzLDFaL/SeRdPnW3kllP6RQ&quot;
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+22:24:16.587 [Test worker] DEBUG org.apache.http.headers - http-outgoing-5 &lt;&lt; Via: 1.1 vegur
+22:24:16.587 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+22:24:16.587 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - Authentication required
+22:24:16.587 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - nodejs-qa-training.herokuapp.com:443 requested authentication
+22:24:16.587 [Test worker] DEBUG org.apache.http.impl.auth.HttpAuthenticator - Response contains no authentication challenges
+22:24:16.591 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 5][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443] can be kept alive indefinitely
+22:24:16.591 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: set socket timeout to 0
+22:24:16.592 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 5][route: {s}-&gt;https://nodejs-qa-training.herokuapp.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+22:24:16.592 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 485,11
+2 &lt; 401
+2 &lt; Connection: keep-alive
+2 &lt; Content-Length: 109
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+2 &lt; Etag: W/&quot;6d-3xzmEzLDFaL/SeRdPnW3kllP6RQ&quot;
+2 &lt; Server: Cowboy
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+{&quot;errors&quot;:[{&quot;code&quot;:&quot;authentication_error&quot;,&quot;message&quot;:&quot;Invalid token&quot;}],&quot;timestamp&quot;:&quot;2020-09-14T03:24:17.611Z&quot;}
+
+22:24:16.602 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:16.602 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+22:24:16.602 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
 </pre>
 </span>
 </div>
@@ -277,7 +631,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at 13/09/2020 10:11:28 PM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 13/09/2020 10:24:17 PM</p>
 </div>
 </div>
 </body>

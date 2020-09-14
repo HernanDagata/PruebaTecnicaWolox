@@ -172,52 +172,52 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.00482</div>
+<div class="time-cell passed">0.003787</div>
 </div>
-<div class="preformatted">22:11:25.032 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="preformatted">22:24:11.919 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
 <div class="step-row">
 <div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.002915</div>
+<div class="time-cell passed">0.002353</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')</div>
-<div class="time-cell passed">2.186002</div>
+<div class="time-cell passed">2.011647</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">autenticar_usuario.feature</div>
-<div class="time-cell passed">2.125994</div>
+<div class="time-cell passed">1.943323</div>
 </div>
 <div class="scenario-steps-nested">
 <div class="step-row">
 <div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
-<div class="time-cell passed">0.006426</div>
+<div class="time-cell passed">0.005044</div>
 </div>
-<div class="preformatted">22:11:25.094 scenario called at line: 27 by tag: @ExitosoRegular</div>
+<div class="preformatted">22:24:11.967 scenario called at line: 27 by tag: @ExitosoRegular</div>
 <div class="step-row">
 <div class="step-cell passed">* def headerContentType = 'application/json'</div>
-<div class="time-cell passed">0.000192</div>
+<div class="time-cell passed">0.000177</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123}</div>
-<div class="time-cell passed">0.078974</div>
+<div class="time-cell passed">0.058395</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">Given url urlBase + 'users/sessions/'</div>
-<div class="time-cell passed">0.005051</div>
+<div class="time-cell passed">0.003808</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
-<div class="time-cell passed">0.000133</div>
+<div class="time-cell passed">0.000121</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And request jsonLogin</div>
-<div class="time-cell passed">0.000023</div>
+<div class="time-cell passed">0.000028</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method post</div>
-<div class="time-cell passed">1.894829</div>
+<div class="time-cell passed">1.765705</div>
 </div>
-<div class="preformatted">22:11:25.964 request:
+<div class="preformatted">22:24:12.698 request:
 1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
@@ -227,76 +227,76 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
 {"email":"hernan00@wolox.com.ar","password":"Hernan123"}
 
-22:11:27.079 response time in milliseconds: 1109,21
+22:24:13.800 response time in milliseconds: 1095,66
 1 &lt; 200
-1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
 1 &lt; Connection: keep-alive
 1 &lt; Content-Length: 51
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
-1 &lt; Etag: W/"33-op4d1Wf/AZwGkKp5QZUNXKz4LWg"
+1 &lt; Date: Mon, 14 Sep 2020 03:24:14 GMT
+1 &lt; Etag: W/"33-mutnfXbis1d29pQ986vm7c1bAFs"
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"user_id":258,"token_expires_at":"1600054888.026"}</div>
+{"user_id":258,"token_expires_at":"1600055654.772"}</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000049</div>
+<div class="time-cell passed">0.000055</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* print response</div>
-<div class="time-cell passed">0.005577</div>
+<div class="time-cell passed">0.002818</div>
 </div>
-<div class="preformatted">22:11:27.090 [print] {
+<div class="preformatted">22:24:13.808 [print] {
   "user_id": 258,
-  "token_expires_at": "1600054888.026"
+  "token_expires_at": "1600055654.772"
 }</div>
 <div class="step-row">
 <div class="step-cell passed">* print responseHeaders['Authorization'][0]</div>
-<div class="time-cell passed">0.091109</div>
+<div class="time-cell passed">0.065407</div>
 </div>
-<div class="preformatted">22:11:27.180 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U</div>
+<div class="preformatted">22:24:13.873 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo</div>
 <div class="step-row">
 <div class="step-cell passed">And match response.user_id == "#number"</div>
-<div class="time-cell passed">0.019767</div>
+<div class="time-cell passed">0.016456</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match response contains read('../json/formato_autenticacion.json')</div>
-<div class="time-cell passed">0.013333</div>
+<div class="time-cell passed">0.013248</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match responseHeaders['Authorization'][0] == "#notnull"</div>
-<div class="time-cell passed">0.01053</div>
+<div class="time-cell passed">0.012061</div>
 </div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</div>
-<div class="time-cell passed">0.010152</div>
+<div class="time-cell passed">0.031227</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">Given url urlBase + 'users/sessions/invalidate_all'</div>
-<div class="time-cell passed">0.003355</div>
+<div class="time-cell passed">0.010827</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Content-Type = headerContentType</div>
-<div class="time-cell passed">0.00004</div>
+<div class="time-cell passed">0.000054</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And header Authorization = varAuthorization</div>
-<div class="time-cell passed">0.000016</div>
+<div class="time-cell passed">0.000061</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And request {}</div>
-<div class="time-cell passed">0.000261</div>
+<div class="time-cell passed">0.000624</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method post</div>
-<div class="time-cell passed">0.41189</div>
+<div class="time-cell passed">0.431123</div>
 </div>
-<div class="preformatted">22:11:27.262 request:
+<div class="preformatted">22:24:14.000 request:
 1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/invalidate_all
 1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTMwODguMDI2LCJleHAiOjE2MDAwNTQ4ODguMDI2fQ.nwBsVublek8Q8i_F-mk2OlfYO1RUirDxqCPhazPMI1U
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
 1 &gt; Connection: Keep-Alive
 1 &gt; Content-Length: 2
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -304,23 +304,257 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
 {}
 
-22:11:27.668 response time in milliseconds: 405,00
+22:24:14.427 response time in milliseconds: 412,26
 1 &lt; 200
 1 &lt; Connection: keep-alive
 1 &lt; Content-Length: 0
-1 &lt; Date: Mon, 14 Sep 2020 03:11:28 GMT
+1 &lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
 1 &lt; Server: Cowboy
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000028</div>
+<div class="time-cell passed">0.000026</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'albums'</div>
+<div class="time-cell passed">0.010806</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000064</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Authorization = varAuthorization</div>
+<div class="time-cell passed">0.00006</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method get</div>
+<div class="time-cell passed">0.398182</div>
+</div>
+<div class="preformatted">22:24:14.444 request:
+2 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAwNTM4NTQuNzcyLCJleHAiOjE2MDAwNTU2NTQuNzcyfQ.IZrueVRXXkHeH9QXpMPTCUYZH5H-1JFnvzDe0Y7emRo
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Type: application/json
+2 &gt; Host: nodejs-qa-training.herokuapp.com
+2 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+22:24:14.837 response time in milliseconds: 389,03
+2 &lt; 401
+2 &lt; Connection: keep-alive
+2 &lt; Content-Length: 109
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Mon, 14 Sep 2020 03:24:15 GMT
+2 &lt; Etag: W/"6d-tYimnDujuNT8BnXl2tj29w+1MkE"
+2 &lt; Server: Cowboy
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+{"errors":[{"code":"authentication_error","message":"Invalid token"}],"timestamp":"2020-09-14T03:24:15.833Z"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 401</div>
+<div class="time-cell passed">0.000024</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response contains read('../json/formato_error.json')</div>
+<div class="time-cell passed">0.026506</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading">
+<span class="scenario-keyword">Scenario: [2:29]</span><span class="scenario-name">Invalidar sesion usuario administrador</span>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
+<div class="time-cell passed">0.000547</div>
+</div>
+<div class="preformatted">22:24:14.901 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-cell passed">* def headerContentType = 'application/json'</div>
+<div class="time-cell passed">0.003244</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoAdministrador')</div>
+<div class="time-cell passed">0.734148</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">autenticar_usuario.feature</div>
+<div class="time-cell passed">0.643663</div>
+</div>
+<div class="scenario-steps-nested">
+<div class="step-row">
+<div class="step-cell passed">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</div>
+<div class="time-cell passed">0.015558</div>
+</div>
+<div class="preformatted">22:24:14.977 scenario called at line: 45 by tag: @ExitosoAdministrador</div>
+<div class="step-row">
+<div class="step-cell passed">* def headerContentType = 'application/json'</div>
+<div class="time-cell passed">0.000457</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* json jsonLogin = {"email": admin@wolox.com.ar, "password": candidatoWolox2020}</div>
+<div class="time-cell passed">0.002498</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'users/sessions/'</div>
+<div class="time-cell passed">0.002086</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000061</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And request jsonLogin</div>
+<div class="time-cell passed">0.000041</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method post</div>
+<div class="time-cell passed">0.60995</div>
+</div>
+<div class="preformatted">22:24:15.007 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 62
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+{"email":"admin@wolox.com.ar","password":"candidatoWolox2020"}
+
+22:24:15.611 response time in milliseconds: 602,04
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 14 Sep 2020 03:24:16 GMT
+1 &lt; Etag: W/"33-zbMBj+AYFd9l+Z5JYC8pUXtgNoY"
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"user_id":146,"token_expires_at":"1600055656.626"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000029</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">* print response</div>
-<div class="time-cell passed">0.000872</div>
+<div class="time-cell passed">0.001379</div>
 </div>
-<div class="preformatted">22:11:27.672 [print]</div>
+<div class="preformatted">22:24:15.614 [print] {
+  "user_id": 146,
+  "token_expires_at": "1600055656.626"
+}</div>
+<div class="step-row">
+<div class="step-cell passed">* print responseHeaders['Authorization'][0]</div>
+<div class="time-cell passed">0.002252</div>
+</div>
+<div class="preformatted">22:24:15.614 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA</div>
+<div class="step-row">
+<div class="step-cell passed">And match response.user_id == "#number"</div>
+<div class="time-cell passed">0.001483</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response contains read('../json/formato_autenticacion.json')</div>
+<div class="time-cell passed">0.006136</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match responseHeaders['Authorization'][0] == "#notnull"</div>
+<div class="time-cell passed">0.001734</div>
+</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">* def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</div>
+<div class="time-cell passed">0.001974</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'users/sessions/invalidate_all'</div>
+<div class="time-cell passed">0.001393</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000063</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Authorization = varAuthorization</div>
+<div class="time-cell passed">0.00004</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And request {}</div>
+<div class="time-cell passed">0.000664</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method post</div>
+<div class="time-cell passed">0.446055</div>
+</div>
+<div class="preformatted">22:24:15.652 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/invalidate_all
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 2
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+{}
+
+22:24:16.091 response time in milliseconds: 437,65
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 0
+1 &lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 200</div>
+<div class="time-cell passed">0.000027</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">Given url urlBase + 'albums'</div>
+<div class="time-cell passed">0.001529</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Content-Type = headerContentType</div>
+<div class="time-cell passed">0.000054</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And header Authorization = varAuthorization</div>
+<div class="time-cell passed">0.000097</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">When method get</div>
+<div class="time-cell passed">0.494799</div>
+</div>
+<div class="preformatted">22:24:16.103 request:
+2 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMDUzODU2LjYyNiwiZXhwIjoxNjAwMDU1NjU2LjYyNn0.Rq4REqIWd7fr_0jauHtHAyFO8fTX2PWtYg0ZAD6ffhA
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Type: application/json
+2 &gt; Host: nodejs-qa-training.herokuapp.com
+2 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_171)
+
+22:24:16.592 response time in milliseconds: 485,11
+2 &lt; 401
+2 &lt; Connection: keep-alive
+2 &lt; Content-Length: 109
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Mon, 14 Sep 2020 03:24:17 GMT
+2 &lt; Etag: W/"6d-3xzmEzLDFaL/SeRdPnW3kllP6RQ"
+2 &lt; Server: Cowboy
+2 &lt; Via: 1.1 vegur
+2 &lt; X-Powered-By: Express
+{"errors":[{"code":"authentication_error","message":"Invalid token"}],"timestamp":"2020-09-14T03:24:17.611Z"}</div>
+<div class="step-row">
+<div class="step-cell passed">Then status 401</div>
+<div class="time-cell passed">0.000029</div>
+</div>
+<div class="step-row">
+<div class="step-cell passed">And match response contains read('../json/formato_error.json')</div>
+<div class="time-cell passed">0.010964</div>
+</div>
 </div>
 </div>
 </body>
