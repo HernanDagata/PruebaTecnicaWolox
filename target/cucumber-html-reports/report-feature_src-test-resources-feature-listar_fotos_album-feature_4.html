@@ -1,0 +1,4557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: src/test/resources/feature/listar_fotos_album.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Prueba - Naiofy</td>
+            <td>14 sep 2020, 21:38</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">src/test/resources/feature/listar_fotos_album.feature</td>
+                    <td      class="passed"    >110</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">110</td>
+
+          <td  class="passed"    >3</td>
+          <td >0</td>
+          <td class="total">3</td>
+
+          <td class="duration" data-value="9995680900">9s 995ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">src/test/resources/feature/listar_fotos_album.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Prueba listar fotos de un album
+Como usurio de la aplicacion
+  Quiero realizar una consulta las fotos
+  Para ver las que componen un album</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>21:38:15.042 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">4s 096ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Listar albumes con usuario regular exitoso</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular')</span>
+  
+  <span class="lead-duration duration">1s 322ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">src/test/resources/feature/listar_albumes.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')</span>
+  
+  <span class="lead-duration duration">729ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;</span>
+  <span class="name">src/test/resources/feature/autenticar_usuario.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">json jsonLogin = {&quot;email&quot;: hernan00@wolox.com.ar, &quot;password&quot;: Hernan123}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Given</span>
+  <span class="name">url urlBase + 'users/sessions/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">request jsonLogin</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">705ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>21:38:15.058 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 56
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+{&quot;email&quot;:&quot;hernan00@wolox.com.ar&quot;,&quot;password&quot;:&quot;Hernan123&quot;}
+
+21:38:15.773 response time in milliseconds: 703,30
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTYuMjI4LCJleHAiOjE2MDAxMzkyOTYuMjI4fQ.u1946Vq9tTCqNh9oJIf7FpL6BjdJ6pLUGf2Pdp5qo38
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:16 GMT
+1 &lt; Etag: W/&quot;33-b6zIgOzUmPlPOUNsTdk0xA2njHA&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600139296.228&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>21:38:15.774 [print] {
+  &quot;token_expires_at&quot;: &quot;1600139296.228&quot;,
+  &quot;user_id&quot;: 258
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print responseHeaders['Authorization'][0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>21:38:15.774 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTYuMjI4LCJleHAiOjE2MDAxMzkyOTYuMjI4fQ.u1946Vq9tTCqNh9oJIf7FpL6BjdJ6pLUGf2Pdp5qo38</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match response.user_id == &quot;#number&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match response contains read('../json/formato_autenticacion.json')</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match responseHeaders['Authorization'][0] == &quot;#notnull&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase + 'albums'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Authorization = varAuthorization</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">553ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>21:38:15.788 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTYuMjI4LCJleHAiOjE2MDAxMzkyOTYuMjI4fQ.u1946Vq9tTCqNh9oJIf7FpL6BjdJ6pLUGf2Pdp5qo38
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+
+21:38:16.339 response time in milliseconds: 548,22
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 7032
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:16 GMT
+1 &lt; Etag: W/&quot;1b78-QLaE6RpZ5E8d2hLg+o5PqJk5Zw8&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+[{&quot;user_id&quot;:1,&quot;id&quot;:1,&quot;title&quot;:&quot;quidem molestiae enim&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:2,&quot;title&quot;:&quot;sunt qui excepturi placeat culpa&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:3,&quot;title&quot;:&quot;omnis laborum odio&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:4,&quot;title&quot;:&quot;non esse culpa molestiae omnis sed optio&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:5,&quot;title&quot;:&quot;eaque aut omnis a&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:6,&quot;title&quot;:&quot;natus impedit quibusdam illo est&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:7,&quot;title&quot;:&quot;quibusdam autem aliquid et et quia&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:8,&quot;title&quot;:&quot;qui fuga est a eum&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:9,&quot;title&quot;:&quot;saepe unde necessitatibus rem&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:10,&quot;title&quot;:&quot;distinctio laborum qui&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:11,&quot;title&quot;:&quot;quam nostrum impedit mollitia quod et dolor&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:12,&quot;title&quot;:&quot;consequatur autem doloribus natus consectetur&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:13,&quot;title&quot;:&quot;ab rerum non rerum consequatur ut ea unde&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:14,&quot;title&quot;:&quot;ducimus molestias eos animi atque nihil&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:15,&quot;title&quot;:&quot;ut pariatur rerum ipsum natus repellendus praesentium&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:16,&quot;title&quot;:&quot;voluptatem aut maxime inventore autem magnam atque repellat&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:17,&quot;title&quot;:&quot;aut minima voluptatem ut velit&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:18,&quot;title&quot;:&quot;nesciunt quia et doloremque&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:19,&quot;title&quot;:&quot;velit pariatur quaerat similique libero omnis quia&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:20,&quot;title&quot;:&quot;voluptas rerum iure ut enim&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:21,&quot;title&quot;:&quot;repudiandae voluptatem optio est consequatur rem in temporibus et&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:22,&quot;title&quot;:&quot;et rem non provident vel ut&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:23,&quot;title&quot;:&quot;incidunt quisquam hic adipisci sequi&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:24,&quot;title&quot;:&quot;dolores ut et facere placeat&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:25,&quot;title&quot;:&quot;vero maxime id possimus sunt neque et consequatur&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:26,&quot;title&quot;:&quot;quibusdam saepe ipsa vel harum&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:27,&quot;title&quot;:&quot;id non nostrum expedita&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:28,&quot;title&quot;:&quot;omnis neque exercitationem sed dolor atque maxime aut cum&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:29,&quot;title&quot;:&quot;inventore ut quasi magnam itaque est fugit&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:30,&quot;title&quot;:&quot;tempora assumenda et similique odit distinctio error&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:31,&quot;title&quot;:&quot;adipisci laborum fuga laboriosam&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:32,&quot;title&quot;:&quot;reiciendis dolores a ut qui debitis non quo labore&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:33,&quot;title&quot;:&quot;iste eos nostrum&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:34,&quot;title&quot;:&quot;cumque voluptatibus rerum architecto blanditiis&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:35,&quot;title&quot;:&quot;et impedit nisi quae magni necessitatibus sed aut pariatur&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:36,&quot;title&quot;:&quot;nihil cupiditate voluptate neque&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:37,&quot;title&quot;:&quot;est placeat dicta ut nisi rerum iste&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:38,&quot;title&quot;:&quot;unde a sequi id&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:39,&quot;title&quot;:&quot;ratione porro illum labore eum aperiam sed&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:40,&quot;title&quot;:&quot;voluptas neque et sint aut quo odit&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:41,&quot;title&quot;:&quot;ea voluptates maiores eos accusantium officiis tempore mollitia consequatur&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:42,&quot;title&quot;:&quot;tenetur explicabo ea&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:43,&quot;title&quot;:&quot;aperiam doloremque nihil&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:44,&quot;title&quot;:&quot;sapiente cum numquam officia consequatur vel natus quos suscipit&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:45,&quot;title&quot;:&quot;tenetur quos ea unde est enim corrupti qui&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:46,&quot;title&quot;:&quot;molestiae voluptate non&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:47,&quot;title&quot;:&quot;temporibus molestiae aut&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:48,&quot;title&quot;:&quot;modi consequatur culpa aut quam soluta alias perspiciatis laudantium&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:49,&quot;title&quot;:&quot;ut aut vero repudiandae voluptas ullam voluptas at consequatur&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:50,&quot;title&quot;:&quot;sed qui sed quas sit ducimus dolor&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:51,&quot;title&quot;:&quot;odit laboriosam sint quia cupiditate animi quis&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:52,&quot;title&quot;:&quot;necessitatibus quas et sunt at voluptatem&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:53,&quot;title&quot;:&quot;est vel sequi voluptatem nemo quam molestiae modi enim&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:54,&quot;title&quot;:&quot;aut non illo amet perferendis&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:55,&quot;title&quot;:&quot;qui culpa itaque omnis in nesciunt architecto error&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:56,&quot;title&quot;:&quot;omnis qui maiores tempora officiis omnis rerum sed repellat&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:57,&quot;title&quot;:&quot;libero excepturi voluptatem est architecto quae voluptatum officia tempora&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:58,&quot;title&quot;:&quot;nulla illo consequatur aspernatur veritatis aut error delectus et&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:59,&quot;title&quot;:&quot;eligendi similique provident nihil&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:60,&quot;title&quot;:&quot;omnis mollitia sunt aliquid eum consequatur fugit minus laudantium&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:61,&quot;title&quot;:&quot;delectus iusto et&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:62,&quot;title&quot;:&quot;eos ea non recusandae iste ut quasi&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:63,&quot;title&quot;:&quot;velit est quam&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:64,&quot;title&quot;:&quot;autem voluptatem amet iure quae&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:65,&quot;title&quot;:&quot;voluptates delectus iure iste qui&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:66,&quot;title&quot;:&quot;velit sed quia dolor dolores delectus&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:67,&quot;title&quot;:&quot;ad voluptas nostrum et nihil&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:68,&quot;title&quot;:&quot;qui quasi nihil aut voluptatum sit dolore minima&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:69,&quot;title&quot;:&quot;qui aut est&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:70,&quot;title&quot;:&quot;et deleniti unde&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:71,&quot;title&quot;:&quot;et vel corporis&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:72,&quot;title&quot;:&quot;unde exercitationem ut&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:73,&quot;title&quot;:&quot;quos omnis officia&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:74,&quot;title&quot;:&quot;quia est eius vitae dolor&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:75,&quot;title&quot;:&quot;aut quia expedita non&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:76,&quot;title&quot;:&quot;dolorem magnam facere itaque ut reprehenderit tenetur corrupti&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:77,&quot;title&quot;:&quot;cupiditate sapiente maiores iusto ducimus cum excepturi veritatis quia&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:78,&quot;title&quot;:&quot;est minima eius possimus ea ratione velit et&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:79,&quot;title&quot;:&quot;ipsa quae voluptas natus ut suscipit soluta quia quidem&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:80,&quot;title&quot;:&quot;id nihil reprehenderit&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:81,&quot;title&quot;:&quot;quibusdam sapiente et&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:82,&quot;title&quot;:&quot;recusandae consequatur vel amet unde&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:83,&quot;title&quot;:&quot;aperiam odio fugiat&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:84,&quot;title&quot;:&quot;est et at eos expedita&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:85,&quot;title&quot;:&quot;qui voluptatem consequatur aut ab quis temporibus praesentium&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:86,&quot;title&quot;:&quot;eligendi mollitia alias aspernatur vel ut iusto&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:87,&quot;title&quot;:&quot;aut aut architecto&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:88,&quot;title&quot;:&quot;quas perspiciatis optio&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:89,&quot;title&quot;:&quot;sit optio id voluptatem est eum et&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:90,&quot;title&quot;:&quot;est vel dignissimos&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:91,&quot;title&quot;:&quot;repellendus praesentium debitis officiis&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:92,&quot;title&quot;:&quot;incidunt et et eligendi assumenda soluta quia recusandae&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:93,&quot;title&quot;:&quot;nisi qui dolores perspiciatis&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:94,&quot;title&quot;:&quot;quisquam a dolores et earum vitae&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:95,&quot;title&quot;:&quot;consectetur vel rerum qui aperiam modi eos aspernatur ipsa&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:96,&quot;title&quot;:&quot;unde et ut molestiae est molestias voluptatem sint&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:97,&quot;title&quot;:&quot;est quod aut&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:98,&quot;title&quot;:&quot;omnis quia possimus nesciunt deleniti assumenda sed autem&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:99,&quot;title&quot;:&quot;consectetur ut id impedit dolores sit ad ex aut&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:100,&quot;title&quot;:&quot;enim repellat iste&quot;}]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def objeto = read('../json/formato_albumes.json')</span>
+  
+  <span class="lead-duration duration">019ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match each response contains objeto</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def totalIdAlbum = jsonAutenticacion.response.length</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def idAlbum = obtenerIdAlbum(totalIdAlbum)</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print idAlbum</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>21:38:16.372 [print] 95.0</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url urlBase + 'albums/' + idAlbum + '/photos'</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = varAuthorization</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">701ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>21:38:16.378 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums/95/photos
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTYuMjI4LCJleHAiOjE2MDAxMzkyOTYuMjI4fQ.u1946Vq9tTCqNh9oJIf7FpL6BjdJ6pLUGf2Pdp5qo38
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+
+21:38:17.076 response time in milliseconds: 698,28
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 9112
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:17 GMT
+1 &lt; Etag: W/&quot;2398-int9021JBOw8bbD5dOGiW4Q47W4&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+[{&quot;album_id&quot;:95,&quot;id&quot;:4701,&quot;title&quot;:&quot;eum reprehenderit vel&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/29dd1f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/29dd1f&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4702,&quot;title&quot;:&quot;temporibus minus occaecati nostrum quia ut alias&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/7e4f06&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/7e4f06&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4703,&quot;title&quot;:&quot;suscipit tempore non placeat nihil pariatur vel omnis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/9d3d94&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/9d3d94&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4704,&quot;title&quot;:&quot;culpa fugit consequatur architecto aperiam et et beatae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/1e03cd&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/1e03cd&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4705,&quot;title&quot;:&quot;numquam sit sed vitae eum sunt velit corrupti nostrum&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/706733&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/706733&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4706,&quot;title&quot;:&quot;itaque deleniti distinctio saepe sit dolores unde amet ea&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/5de18a&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/5de18a&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4707,&quot;title&quot;:&quot;dolorem veritatis voluptatem dolor autem voluptas eum iusto&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2d7c19&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2d7c19&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4708,&quot;title&quot;:&quot;maxime consequatur quo id cumque quos&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/c86657&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/c86657&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4709,&quot;title&quot;:&quot;culpa facere quaerat enim reiciendis est eos&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/4da9bc&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/4da9bc&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4710,&quot;title&quot;:&quot;est numquam eius voluptates dolores dicta et adipisci&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/772886&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/772886&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4711,&quot;title&quot;:&quot;qui veritatis consequatur perferendis et asperiores&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/7072b4&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/7072b4&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4712,&quot;title&quot;:&quot;aut et ut&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/78697e&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/78697e&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4713,&quot;title&quot;:&quot;quod quas cupiditate modi exercitationem cum quo&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/96b603&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/96b603&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4714,&quot;title&quot;:&quot;porro et omnis aliquam consequatur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/57ae8f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/57ae8f&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4715,&quot;title&quot;:&quot;reprehenderit placeat dolor consequatur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/fc6462&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/fc6462&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4716,&quot;title&quot;:&quot;vitae similique sit doloremque rem eos repellendus reiciendis distinctio&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/be1d4f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/be1d4f&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4717,&quot;title&quot;:&quot;eligendi fugit velit&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/144723&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/144723&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4718,&quot;title&quot;:&quot;aspernatur quam libero&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8d33b9&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8d33b9&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4719,&quot;title&quot;:&quot;ipsum atque amet voluptas mollitia rerum inventore&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/6bb2f7&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/6bb2f7&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4720,&quot;title&quot;:&quot;eos perferendis ratione facere quia officia ut adipisci eveniet&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/5f6c86&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/5f6c86&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4721,&quot;title&quot;:&quot;molestiae nesciunt iure doloribus enim&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/dede91&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/dede91&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4722,&quot;title&quot;:&quot;explicabo aut quidem non excepturi sit&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8b196f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8b196f&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4723,&quot;title&quot;:&quot;esse nobis veritatis est quas odio sunt dolore&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/f8c94f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/f8c94f&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4724,&quot;title&quot;:&quot;et unde incidunt exercitationem veniam reprehenderit sint aliquid quis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/9cad53&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/9cad53&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4725,&quot;title&quot;:&quot;non corrupti perspiciatis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/68d312&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/68d312&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4726,&quot;title&quot;:&quot;tempora quia dignissimos et est aut et&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/fb2057&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/fb2057&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4727,&quot;title&quot;:&quot;totam amet eos&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/1a414c&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/1a414c&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4728,&quot;title&quot;:&quot;sit ut ut exercitationem molestias voluptatem facilis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e2b2b7&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e2b2b7&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4729,&quot;title&quot;:&quot;impedit ullam rerum sequi necessitatibus alias sit&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/7d59c2&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/7d59c2&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4730,&quot;title&quot;:&quot;quam labore quis ut aspernatur ut aut maxime&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/5320be&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/5320be&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4731,&quot;title&quot;:&quot;porro vel laboriosam quo omnis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a4fb6e&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a4fb6e&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4732,&quot;title&quot;:&quot;officiis explicabo corrupti suscipit impedit eius nihil libero&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/647500&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/647500&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4733,&quot;title&quot;:&quot;aspernatur perspiciatis fuga inventore maxime&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e4b5ab&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e4b5ab&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4734,&quot;title&quot;:&quot;qui assumenda repellat fugit&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/7d5060&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/7d5060&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4735,&quot;title&quot;:&quot;exercitationem ut autem qui placeat quod qui&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/1c0575&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/1c0575&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4736,&quot;title&quot;:&quot;maiores ipsa ipsum id aliquid ut sed minima alias&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/9f80cf&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/9f80cf&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4737,&quot;title&quot;:&quot;ex explicabo reiciendis corrupti&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/989401&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/989401&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4738,&quot;title&quot;:&quot;voluptatum enim dolores et&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/74878a&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/74878a&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4739,&quot;title&quot;:&quot;nisi unde ut nesciunt hic&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/64b444&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/64b444&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4740,&quot;title&quot;:&quot;qui sunt ratione nobis magni&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/b7b760&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/b7b760&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4741,&quot;title&quot;:&quot;est nesciunt quasi sint dolores deserunt&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/f8445d&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/f8445d&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4742,&quot;title&quot;:&quot;vitae ducimus consequuntur aut nam ad ea voluptatem neque&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a3eeb4&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a3eeb4&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4743,&quot;title&quot;:&quot;omnis veritatis explicabo placeat rerum&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/976811&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/976811&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4744,&quot;title&quot;:&quot;corporis tenetur voluptatem repudiandae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e2f650&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e2f650&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4745,&quot;title&quot;:&quot;dolor possimus officia aperiam voluptatum ea quae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2df04&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2df04&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4746,&quot;title&quot;:&quot;et et ipsa quo aspernatur assumenda&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/c1cfd6&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/c1cfd6&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4747,&quot;title&quot;:&quot;officiis dicta inventore&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/b1de93&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/b1de93&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4748,&quot;title&quot;:&quot;consequatur repellendus doloremque aliquam&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/1bffe1&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/1bffe1&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4749,&quot;title&quot;:&quot;atque alias maxime veritatis qui quia natus quo&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2dbb70&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2dbb70&quot;},{&quot;album_id&quot;:95,&quot;id&quot;:4750,&quot;title&quot;:&quot;libero numquam qui&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/cc1ea2&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/cc1ea2&quot;}]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>21:38:17.080 [print] [
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4701,
+    &quot;title&quot;: &quot;eum reprehenderit vel&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/29dd1f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/29dd1f&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4702,
+    &quot;title&quot;: &quot;temporibus minus occaecati nostrum quia ut alias&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/7e4f06&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/7e4f06&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4703,
+    &quot;title&quot;: &quot;suscipit tempore non placeat nihil pariatur vel omnis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/9d3d94&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/9d3d94&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4704,
+    &quot;title&quot;: &quot;culpa fugit consequatur architecto aperiam et et beatae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/1e03cd&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/1e03cd&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4705,
+    &quot;title&quot;: &quot;numquam sit sed vitae eum sunt velit corrupti nostrum&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/706733&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/706733&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4706,
+    &quot;title&quot;: &quot;itaque deleniti distinctio saepe sit dolores unde amet ea&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/5de18a&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/5de18a&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4707,
+    &quot;title&quot;: &quot;dolorem veritatis voluptatem dolor autem voluptas eum iusto&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2d7c19&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2d7c19&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4708,
+    &quot;title&quot;: &quot;maxime consequatur quo id cumque quos&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/c86657&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/c86657&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4709,
+    &quot;title&quot;: &quot;culpa facere quaerat enim reiciendis est eos&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/4da9bc&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/4da9bc&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4710,
+    &quot;title&quot;: &quot;est numquam eius voluptates dolores dicta et adipisci&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/772886&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/772886&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4711,
+    &quot;title&quot;: &quot;qui veritatis consequatur perferendis et asperiores&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/7072b4&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/7072b4&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4712,
+    &quot;title&quot;: &quot;aut et ut&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/78697e&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/78697e&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4713,
+    &quot;title&quot;: &quot;quod quas cupiditate modi exercitationem cum quo&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/96b603&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/96b603&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4714,
+    &quot;title&quot;: &quot;porro et omnis aliquam consequatur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/57ae8f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/57ae8f&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4715,
+    &quot;title&quot;: &quot;reprehenderit placeat dolor consequatur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/fc6462&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/fc6462&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4716,
+    &quot;title&quot;: &quot;vitae similique sit doloremque rem eos repellendus reiciendis distinctio&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/be1d4f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/be1d4f&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4717,
+    &quot;title&quot;: &quot;eligendi fugit velit&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/144723&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/144723&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4718,
+    &quot;title&quot;: &quot;aspernatur quam libero&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8d33b9&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8d33b9&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4719,
+    &quot;title&quot;: &quot;ipsum atque amet voluptas mollitia rerum inventore&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/6bb2f7&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/6bb2f7&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4720,
+    &quot;title&quot;: &quot;eos perferendis ratione facere quia officia ut adipisci eveniet&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/5f6c86&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/5f6c86&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4721,
+    &quot;title&quot;: &quot;molestiae nesciunt iure doloribus enim&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/dede91&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/dede91&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4722,
+    &quot;title&quot;: &quot;explicabo aut quidem non excepturi sit&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8b196f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8b196f&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4723,
+    &quot;title&quot;: &quot;esse nobis veritatis est quas odio sunt dolore&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/f8c94f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/f8c94f&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4724,
+    &quot;title&quot;: &quot;et unde incidunt exercitationem veniam reprehenderit sint aliquid quis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/9cad53&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/9cad53&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4725,
+    &quot;title&quot;: &quot;non corrupti perspiciatis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/68d312&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/68d312&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4726,
+    &quot;title&quot;: &quot;tempora quia dignissimos et est aut et&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/fb2057&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/fb2057&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4727,
+    &quot;title&quot;: &quot;totam amet eos&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/1a414c&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/1a414c&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4728,
+    &quot;title&quot;: &quot;sit ut ut exercitationem molestias voluptatem facilis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e2b2b7&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e2b2b7&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4729,
+    &quot;title&quot;: &quot;impedit ullam rerum sequi necessitatibus alias sit&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/7d59c2&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/7d59c2&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4730,
+    &quot;title&quot;: &quot;quam labore quis ut aspernatur ut aut maxime&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/5320be&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/5320be&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4731,
+    &quot;title&quot;: &quot;porro vel laboriosam quo omnis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a4fb6e&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a4fb6e&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4732,
+    &quot;title&quot;: &quot;officiis explicabo corrupti suscipit impedit eius nihil libero&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/647500&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/647500&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4733,
+    &quot;title&quot;: &quot;aspernatur perspiciatis fuga inventore maxime&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e4b5ab&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e4b5ab&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4734,
+    &quot;title&quot;: &quot;qui assumenda repellat fugit&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/7d5060&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/7d5060&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4735,
+    &quot;title&quot;: &quot;exercitationem ut autem qui placeat quod qui&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/1c0575&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/1c0575&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4736,
+    &quot;title&quot;: &quot;maiores ipsa ipsum id aliquid ut sed minima alias&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/9f80cf&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/9f80cf&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4737,
+    &quot;title&quot;: &quot;ex explicabo reiciendis corrupti&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/989401&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/989401&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4738,
+    &quot;title&quot;: &quot;voluptatum enim dolores et&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/74878a&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/74878a&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4739,
+    &quot;title&quot;: &quot;nisi unde ut nesciunt hic&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/64b444&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/64b444&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4740,
+    &quot;title&quot;: &quot;qui sunt ratione nobis magni&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/b7b760&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/b7b760&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4741,
+    &quot;title&quot;: &quot;est nesciunt quasi sint dolores deserunt&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/f8445d&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/f8445d&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4742,
+    &quot;title&quot;: &quot;vitae ducimus consequuntur aut nam ad ea voluptatem neque&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a3eeb4&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a3eeb4&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4743,
+    &quot;title&quot;: &quot;omnis veritatis explicabo placeat rerum&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/976811&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/976811&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4744,
+    &quot;title&quot;: &quot;corporis tenetur voluptatem repudiandae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e2f650&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e2f650&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4745,
+    &quot;title&quot;: &quot;dolor possimus officia aperiam voluptatum ea quae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2df04&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2df04&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4746,
+    &quot;title&quot;: &quot;et et ipsa quo aspernatur assumenda&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/c1cfd6&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/c1cfd6&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4747,
+    &quot;title&quot;: &quot;officiis dicta inventore&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/b1de93&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/b1de93&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4748,
+    &quot;title&quot;: &quot;consequatur repellendus doloremque aliquam&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/1bffe1&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/1bffe1&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4749,
+    &quot;title&quot;: &quot;atque alias maxime veritatis qui quia natus quo&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2dbb70&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2dbb70&quot;
+  },
+  {
+    &quot;album_id&quot;: 95,
+    &quot;id&quot;: 4750,
+    &quot;title&quot;: &quot;libero numquam qui&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/cc1ea2&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/cc1ea2&quot;
+  }
+]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def objeto = read('../json/formato_fotos.json')</span>
+  
+  <span class="lead-duration duration">040ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match each response contains objeto</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>21:38:16.178 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">3s 929ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Listar albumes con usuario administrador exitoso</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def jsonAutenticacion = call read('listar_albumes.feature@ExitosoAdministrador')</span>
+  
+  <span class="lead-duration duration">1s 274ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">src/test/resources/feature/listar_albumes.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoAdministrador')</span>
+  
+  <span class="lead-duration duration">737ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;</span>
+  <span class="name">src/test/resources/feature/autenticar_usuario.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">json jsonLogin = {&quot;email&quot;: admin@wolox.com.ar, &quot;password&quot;: candidatoWolox2020}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Given</span>
+  <span class="name">url urlBase + 'users/sessions/'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">request jsonLogin</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">708ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>21:38:16.215 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 62
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+{&quot;email&quot;:&quot;admin@wolox.com.ar&quot;,&quot;password&quot;:&quot;candidatoWolox2020&quot;}
+
+21:38:16.911 response time in milliseconds: 706,34
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:17 GMT
+1 &lt; Etag: W/&quot;33-gLI5a1+kTj5bod6kCHaPx4QWZlM&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;user_id&quot;:146,&quot;token_expires_at&quot;:&quot;1600139297.313&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details">
+        <pre>21:38:16.911 [print] {
+  &quot;token_expires_at&quot;: &quot;1600139297.313&quot;,
+  &quot;user_id&quot;: 146
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print responseHeaders['Authorization'][0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>21:38:16.911 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match response.user_id == &quot;#number&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match response contains read('../json/formato_autenticacion.json')</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match responseHeaders['Authorization'][0] == &quot;#notnull&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase + 'albums'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Authorization = varAuthorization</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">494ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>21:38:16.927 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+
+21:38:17.413 response time in milliseconds: 490,83
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 7032
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:17 GMT
+1 &lt; Etag: W/&quot;1b78-QLaE6RpZ5E8d2hLg+o5PqJk5Zw8&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+[{&quot;user_id&quot;:1,&quot;id&quot;:1,&quot;title&quot;:&quot;quidem molestiae enim&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:2,&quot;title&quot;:&quot;sunt qui excepturi placeat culpa&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:3,&quot;title&quot;:&quot;omnis laborum odio&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:4,&quot;title&quot;:&quot;non esse culpa molestiae omnis sed optio&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:5,&quot;title&quot;:&quot;eaque aut omnis a&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:6,&quot;title&quot;:&quot;natus impedit quibusdam illo est&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:7,&quot;title&quot;:&quot;quibusdam autem aliquid et et quia&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:8,&quot;title&quot;:&quot;qui fuga est a eum&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:9,&quot;title&quot;:&quot;saepe unde necessitatibus rem&quot;},{&quot;user_id&quot;:1,&quot;id&quot;:10,&quot;title&quot;:&quot;distinctio laborum qui&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:11,&quot;title&quot;:&quot;quam nostrum impedit mollitia quod et dolor&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:12,&quot;title&quot;:&quot;consequatur autem doloribus natus consectetur&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:13,&quot;title&quot;:&quot;ab rerum non rerum consequatur ut ea unde&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:14,&quot;title&quot;:&quot;ducimus molestias eos animi atque nihil&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:15,&quot;title&quot;:&quot;ut pariatur rerum ipsum natus repellendus praesentium&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:16,&quot;title&quot;:&quot;voluptatem aut maxime inventore autem magnam atque repellat&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:17,&quot;title&quot;:&quot;aut minima voluptatem ut velit&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:18,&quot;title&quot;:&quot;nesciunt quia et doloremque&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:19,&quot;title&quot;:&quot;velit pariatur quaerat similique libero omnis quia&quot;},{&quot;user_id&quot;:2,&quot;id&quot;:20,&quot;title&quot;:&quot;voluptas rerum iure ut enim&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:21,&quot;title&quot;:&quot;repudiandae voluptatem optio est consequatur rem in temporibus et&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:22,&quot;title&quot;:&quot;et rem non provident vel ut&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:23,&quot;title&quot;:&quot;incidunt quisquam hic adipisci sequi&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:24,&quot;title&quot;:&quot;dolores ut et facere placeat&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:25,&quot;title&quot;:&quot;vero maxime id possimus sunt neque et consequatur&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:26,&quot;title&quot;:&quot;quibusdam saepe ipsa vel harum&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:27,&quot;title&quot;:&quot;id non nostrum expedita&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:28,&quot;title&quot;:&quot;omnis neque exercitationem sed dolor atque maxime aut cum&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:29,&quot;title&quot;:&quot;inventore ut quasi magnam itaque est fugit&quot;},{&quot;user_id&quot;:3,&quot;id&quot;:30,&quot;title&quot;:&quot;tempora assumenda et similique odit distinctio error&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:31,&quot;title&quot;:&quot;adipisci laborum fuga laboriosam&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:32,&quot;title&quot;:&quot;reiciendis dolores a ut qui debitis non quo labore&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:33,&quot;title&quot;:&quot;iste eos nostrum&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:34,&quot;title&quot;:&quot;cumque voluptatibus rerum architecto blanditiis&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:35,&quot;title&quot;:&quot;et impedit nisi quae magni necessitatibus sed aut pariatur&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:36,&quot;title&quot;:&quot;nihil cupiditate voluptate neque&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:37,&quot;title&quot;:&quot;est placeat dicta ut nisi rerum iste&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:38,&quot;title&quot;:&quot;unde a sequi id&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:39,&quot;title&quot;:&quot;ratione porro illum labore eum aperiam sed&quot;},{&quot;user_id&quot;:4,&quot;id&quot;:40,&quot;title&quot;:&quot;voluptas neque et sint aut quo odit&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:41,&quot;title&quot;:&quot;ea voluptates maiores eos accusantium officiis tempore mollitia consequatur&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:42,&quot;title&quot;:&quot;tenetur explicabo ea&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:43,&quot;title&quot;:&quot;aperiam doloremque nihil&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:44,&quot;title&quot;:&quot;sapiente cum numquam officia consequatur vel natus quos suscipit&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:45,&quot;title&quot;:&quot;tenetur quos ea unde est enim corrupti qui&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:46,&quot;title&quot;:&quot;molestiae voluptate non&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:47,&quot;title&quot;:&quot;temporibus molestiae aut&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:48,&quot;title&quot;:&quot;modi consequatur culpa aut quam soluta alias perspiciatis laudantium&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:49,&quot;title&quot;:&quot;ut aut vero repudiandae voluptas ullam voluptas at consequatur&quot;},{&quot;user_id&quot;:5,&quot;id&quot;:50,&quot;title&quot;:&quot;sed qui sed quas sit ducimus dolor&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:51,&quot;title&quot;:&quot;odit laboriosam sint quia cupiditate animi quis&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:52,&quot;title&quot;:&quot;necessitatibus quas et sunt at voluptatem&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:53,&quot;title&quot;:&quot;est vel sequi voluptatem nemo quam molestiae modi enim&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:54,&quot;title&quot;:&quot;aut non illo amet perferendis&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:55,&quot;title&quot;:&quot;qui culpa itaque omnis in nesciunt architecto error&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:56,&quot;title&quot;:&quot;omnis qui maiores tempora officiis omnis rerum sed repellat&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:57,&quot;title&quot;:&quot;libero excepturi voluptatem est architecto quae voluptatum officia tempora&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:58,&quot;title&quot;:&quot;nulla illo consequatur aspernatur veritatis aut error delectus et&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:59,&quot;title&quot;:&quot;eligendi similique provident nihil&quot;},{&quot;user_id&quot;:6,&quot;id&quot;:60,&quot;title&quot;:&quot;omnis mollitia sunt aliquid eum consequatur fugit minus laudantium&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:61,&quot;title&quot;:&quot;delectus iusto et&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:62,&quot;title&quot;:&quot;eos ea non recusandae iste ut quasi&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:63,&quot;title&quot;:&quot;velit est quam&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:64,&quot;title&quot;:&quot;autem voluptatem amet iure quae&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:65,&quot;title&quot;:&quot;voluptates delectus iure iste qui&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:66,&quot;title&quot;:&quot;velit sed quia dolor dolores delectus&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:67,&quot;title&quot;:&quot;ad voluptas nostrum et nihil&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:68,&quot;title&quot;:&quot;qui quasi nihil aut voluptatum sit dolore minima&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:69,&quot;title&quot;:&quot;qui aut est&quot;},{&quot;user_id&quot;:7,&quot;id&quot;:70,&quot;title&quot;:&quot;et deleniti unde&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:71,&quot;title&quot;:&quot;et vel corporis&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:72,&quot;title&quot;:&quot;unde exercitationem ut&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:73,&quot;title&quot;:&quot;quos omnis officia&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:74,&quot;title&quot;:&quot;quia est eius vitae dolor&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:75,&quot;title&quot;:&quot;aut quia expedita non&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:76,&quot;title&quot;:&quot;dolorem magnam facere itaque ut reprehenderit tenetur corrupti&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:77,&quot;title&quot;:&quot;cupiditate sapiente maiores iusto ducimus cum excepturi veritatis quia&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:78,&quot;title&quot;:&quot;est minima eius possimus ea ratione velit et&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:79,&quot;title&quot;:&quot;ipsa quae voluptas natus ut suscipit soluta quia quidem&quot;},{&quot;user_id&quot;:8,&quot;id&quot;:80,&quot;title&quot;:&quot;id nihil reprehenderit&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:81,&quot;title&quot;:&quot;quibusdam sapiente et&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:82,&quot;title&quot;:&quot;recusandae consequatur vel amet unde&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:83,&quot;title&quot;:&quot;aperiam odio fugiat&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:84,&quot;title&quot;:&quot;est et at eos expedita&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:85,&quot;title&quot;:&quot;qui voluptatem consequatur aut ab quis temporibus praesentium&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:86,&quot;title&quot;:&quot;eligendi mollitia alias aspernatur vel ut iusto&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:87,&quot;title&quot;:&quot;aut aut architecto&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:88,&quot;title&quot;:&quot;quas perspiciatis optio&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:89,&quot;title&quot;:&quot;sit optio id voluptatem est eum et&quot;},{&quot;user_id&quot;:9,&quot;id&quot;:90,&quot;title&quot;:&quot;est vel dignissimos&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:91,&quot;title&quot;:&quot;repellendus praesentium debitis officiis&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:92,&quot;title&quot;:&quot;incidunt et et eligendi assumenda soluta quia recusandae&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:93,&quot;title&quot;:&quot;nisi qui dolores perspiciatis&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:94,&quot;title&quot;:&quot;quisquam a dolores et earum vitae&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:95,&quot;title&quot;:&quot;consectetur vel rerum qui aperiam modi eos aspernatur ipsa&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:96,&quot;title&quot;:&quot;unde et ut molestiae est molestias voluptatem sint&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:97,&quot;title&quot;:&quot;est quod aut&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:98,&quot;title&quot;:&quot;omnis quia possimus nesciunt deleniti assumenda sed autem&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:99,&quot;title&quot;:&quot;consectetur ut id impedit dolores sit ad ex aut&quot;},{&quot;user_id&quot;:10,&quot;id&quot;:100,&quot;title&quot;:&quot;enim repellat iste&quot;}]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def objeto = read('../json/formato_albumes.json')</span>
+  
+  <span class="lead-duration duration">019ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match each response contains objeto</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print jsonAutenticacion</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>21:38:17.444 [print] {
+  &quot;responseTime&quot;: 491,
+  &quot;objeto&quot;: {
+    &quot;user_id&quot;: &quot;#number&quot;,
+    &quot;id&quot;: &quot;#number&quot;,
+    &quot;title&quot;: &quot;#string&quot;
+  },
+  &quot;responseStatus&quot;: 200,
+  &quot;__loop&quot;: -1,
+  &quot;__arg&quot;: null,
+  &quot;urlBase&quot;: &quot;https://nodejs-qa-training.herokuapp.com/&quot;,
+  &quot;responseType&quot;: &quot;json&quot;,
+  &quot;responseHeaders&quot;: {
+    &quot;Server&quot;: [
+      &quot;Cowboy&quot;
+    ],
+    &quot;Connection&quot;: [
+      &quot;keep-alive&quot;
+    ],
+    &quot;X-Powered-By&quot;: [
+      &quot;Express&quot;
+    ],
+    &quot;Content-Type&quot;: [
+      &quot;application/json; charset=utf-8&quot;
+    ],
+    &quot;Content-Length&quot;: [
+      &quot;7032&quot;
+    ],
+    &quot;Etag&quot;: [
+      &quot;W/\&quot;1b78-QLaE6RpZ5E8d2hLg+o5PqJk5Zw8\&quot;&quot;
+    ],
+    &quot;Date&quot;: [
+      &quot;Tue, 15 Sep 2020 02:38:17 GMT&quot;
+    ],
+    &quot;Via&quot;: [
+      &quot;1.1 vegur&quot;
+    ]
+  },
+  &quot;jsonAutenticacion&quot;: {
+    &quot;newUserMail&quot;: &quot;admin@wolox.com.ar&quot;,
+    &quot;__num&quot;: 0,
+    &quot;resultadoEsperadoHeader&quot;: &quot;\&quot;#notnull\&quot;&quot;,
+    &quot;responseTime&quot;: 706,
+    &quot;jsonLogin&quot;: {
+      &quot;email&quot;: &quot;admin@wolox.com.ar&quot;,
+      &quot;password&quot;: &quot;candidatoWolox2020&quot;
+    },
+    &quot;responseStatus&quot;: 200,
+    &quot;__loop&quot;: -1,
+    &quot;__arg&quot;: null,
+    &quot;urlBase&quot;: &quot;https://nodejs-qa-training.herokuapp.com/&quot;,
+    &quot;responseType&quot;: &quot;json&quot;,
+    &quot;responseHeaders&quot;: {
+      &quot;Server&quot;: [
+        &quot;Cowboy&quot;
+      ],
+      &quot;Connection&quot;: [
+        &quot;keep-alive&quot;
+      ],
+      &quot;X-Powered-By&quot;: [
+        &quot;Express&quot;
+      ],
+      &quot;Authorization&quot;: [
+        &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME&quot;
+      ],
+      &quot;Content-Type&quot;: [
+        &quot;application/json; charset=utf-8&quot;
+      ],
+      &quot;Content-Length&quot;: [
+        &quot;51&quot;
+      ],
+      &quot;Etag&quot;: [
+        &quot;W/\&quot;33-gLI5a1+kTj5bod6kCHaPx4QWZlM\&quot;&quot;
+      ],
+      &quot;Date&quot;: [
+        &quot;Tue, 15 Sep 2020 02:38:17 GMT&quot;
+      ],
+      &quot;Via&quot;: [
+        &quot;1.1 vegur&quot;
+      ]
+    },
+    &quot;response&quot;: {
+      &quot;token_expires_at&quot;: &quot;1600139297.313&quot;,
+      &quot;user_id&quot;: 146
+    },
+    &quot;requestTimeStamp&quot;: 1600137496216,
+    &quot;newUserPassword&quot;: &quot;candidatoWolox2020&quot;,
+    &quot;resultadoEsperadoUserId&quot;: &quot;\&quot;#number\&quot;&quot;,
+    &quot;__row&quot;: {
+      &quot;newUserMail&quot;: &quot;admin@wolox.com.ar&quot;,
+      &quot;newUserPassword&quot;: &quot;candidatoWolox2020&quot;,
+      &quot;resultadoEsperadoUserId&quot;: &quot;\&quot;#number\&quot;&quot;,
+      &quot;resultadoEsperadoHeader&quot;: &quot;\&quot;#notnull\&quot;&quot;
+    },
+    &quot;responseCookies&quot;: null,
+    &quot;headerContentType&quot;: &quot;application/json&quot;
+  },
+  &quot;response&quot;: [
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 1,
+      &quot;title&quot;: &quot;quidem molestiae enim&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 2,
+      &quot;title&quot;: &quot;sunt qui excepturi placeat culpa&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 3,
+      &quot;title&quot;: &quot;omnis laborum odio&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 4,
+      &quot;title&quot;: &quot;non esse culpa molestiae omnis sed optio&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 5,
+      &quot;title&quot;: &quot;eaque aut omnis a&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 6,
+      &quot;title&quot;: &quot;natus impedit quibusdam illo est&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 7,
+      &quot;title&quot;: &quot;quibusdam autem aliquid et et quia&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 8,
+      &quot;title&quot;: &quot;qui fuga est a eum&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 9,
+      &quot;title&quot;: &quot;saepe unde necessitatibus rem&quot;
+    },
+    {
+      &quot;user_id&quot;: 1,
+      &quot;id&quot;: 10,
+      &quot;title&quot;: &quot;distinctio laborum qui&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 11,
+      &quot;title&quot;: &quot;quam nostrum impedit mollitia quod et dolor&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 12,
+      &quot;title&quot;: &quot;consequatur autem doloribus natus consectetur&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 13,
+      &quot;title&quot;: &quot;ab rerum non rerum consequatur ut ea unde&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 14,
+      &quot;title&quot;: &quot;ducimus molestias eos animi atque nihil&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 15,
+      &quot;title&quot;: &quot;ut pariatur rerum ipsum natus repellendus praesentium&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 16,
+      &quot;title&quot;: &quot;voluptatem aut maxime inventore autem magnam atque repellat&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 17,
+      &quot;title&quot;: &quot;aut minima voluptatem ut velit&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 18,
+      &quot;title&quot;: &quot;nesciunt quia et doloremque&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 19,
+      &quot;title&quot;: &quot;velit pariatur quaerat similique libero omnis quia&quot;
+    },
+    {
+      &quot;user_id&quot;: 2,
+      &quot;id&quot;: 20,
+      &quot;title&quot;: &quot;voluptas rerum iure ut enim&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 21,
+      &quot;title&quot;: &quot;repudiandae voluptatem optio est consequatur rem in temporibus et&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 22,
+      &quot;title&quot;: &quot;et rem non provident vel ut&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 23,
+      &quot;title&quot;: &quot;incidunt quisquam hic adipisci sequi&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 24,
+      &quot;title&quot;: &quot;dolores ut et facere placeat&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 25,
+      &quot;title&quot;: &quot;vero maxime id possimus sunt neque et consequatur&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 26,
+      &quot;title&quot;: &quot;quibusdam saepe ipsa vel harum&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 27,
+      &quot;title&quot;: &quot;id non nostrum expedita&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 28,
+      &quot;title&quot;: &quot;omnis neque exercitationem sed dolor atque maxime aut cum&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 29,
+      &quot;title&quot;: &quot;inventore ut quasi magnam itaque est fugit&quot;
+    },
+    {
+      &quot;user_id&quot;: 3,
+      &quot;id&quot;: 30,
+      &quot;title&quot;: &quot;tempora assumenda et similique odit distinctio error&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 31,
+      &quot;title&quot;: &quot;adipisci laborum fuga laboriosam&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 32,
+      &quot;title&quot;: &quot;reiciendis dolores a ut qui debitis non quo labore&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 33,
+      &quot;title&quot;: &quot;iste eos nostrum&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 34,
+      &quot;title&quot;: &quot;cumque voluptatibus rerum architecto blanditiis&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 35,
+      &quot;title&quot;: &quot;et impedit nisi quae magni necessitatibus sed aut pariatur&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 36,
+      &quot;title&quot;: &quot;nihil cupiditate voluptate neque&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 37,
+      &quot;title&quot;: &quot;est placeat dicta ut nisi rerum iste&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 38,
+      &quot;title&quot;: &quot;unde a sequi id&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 39,
+      &quot;title&quot;: &quot;ratione porro illum labore eum aperiam sed&quot;
+    },
+    {
+      &quot;user_id&quot;: 4,
+      &quot;id&quot;: 40,
+      &quot;title&quot;: &quot;voluptas neque et sint aut quo odit&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 41,
+      &quot;title&quot;: &quot;ea voluptates maiores eos accusantium officiis tempore mollitia consequatur&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 42,
+      &quot;title&quot;: &quot;tenetur explicabo ea&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 43,
+      &quot;title&quot;: &quot;aperiam doloremque nihil&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 44,
+      &quot;title&quot;: &quot;sapiente cum numquam officia consequatur vel natus quos suscipit&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 45,
+      &quot;title&quot;: &quot;tenetur quos ea unde est enim corrupti qui&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 46,
+      &quot;title&quot;: &quot;molestiae voluptate non&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 47,
+      &quot;title&quot;: &quot;temporibus molestiae aut&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 48,
+      &quot;title&quot;: &quot;modi consequatur culpa aut quam soluta alias perspiciatis laudantium&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 49,
+      &quot;title&quot;: &quot;ut aut vero repudiandae voluptas ullam voluptas at consequatur&quot;
+    },
+    {
+      &quot;user_id&quot;: 5,
+      &quot;id&quot;: 50,
+      &quot;title&quot;: &quot;sed qui sed quas sit ducimus dolor&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 51,
+      &quot;title&quot;: &quot;odit laboriosam sint quia cupiditate animi quis&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 52,
+      &quot;title&quot;: &quot;necessitatibus quas et sunt at voluptatem&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 53,
+      &quot;title&quot;: &quot;est vel sequi voluptatem nemo quam molestiae modi enim&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 54,
+      &quot;title&quot;: &quot;aut non illo amet perferendis&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 55,
+      &quot;title&quot;: &quot;qui culpa itaque omnis in nesciunt architecto error&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 56,
+      &quot;title&quot;: &quot;omnis qui maiores tempora officiis omnis rerum sed repellat&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 57,
+      &quot;title&quot;: &quot;libero excepturi voluptatem est architecto quae voluptatum officia tempora&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 58,
+      &quot;title&quot;: &quot;nulla illo consequatur aspernatur veritatis aut error delectus et&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 59,
+      &quot;title&quot;: &quot;eligendi similique provident nihil&quot;
+    },
+    {
+      &quot;user_id&quot;: 6,
+      &quot;id&quot;: 60,
+      &quot;title&quot;: &quot;omnis mollitia sunt aliquid eum consequatur fugit minus laudantium&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 61,
+      &quot;title&quot;: &quot;delectus iusto et&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 62,
+      &quot;title&quot;: &quot;eos ea non recusandae iste ut quasi&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 63,
+      &quot;title&quot;: &quot;velit est quam&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 64,
+      &quot;title&quot;: &quot;autem voluptatem amet iure quae&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 65,
+      &quot;title&quot;: &quot;voluptates delectus iure iste qui&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 66,
+      &quot;title&quot;: &quot;velit sed quia dolor dolores delectus&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 67,
+      &quot;title&quot;: &quot;ad voluptas nostrum et nihil&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 68,
+      &quot;title&quot;: &quot;qui quasi nihil aut voluptatum sit dolore minima&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 69,
+      &quot;title&quot;: &quot;qui aut est&quot;
+    },
+    {
+      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 70,
+      &quot;title&quot;: &quot;et deleniti unde&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 71,
+      &quot;title&quot;: &quot;et vel corporis&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 72,
+      &quot;title&quot;: &quot;unde exercitationem ut&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 73,
+      &quot;title&quot;: &quot;quos omnis officia&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 74,
+      &quot;title&quot;: &quot;quia est eius vitae dolor&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 75,
+      &quot;title&quot;: &quot;aut quia expedita non&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 76,
+      &quot;title&quot;: &quot;dolorem magnam facere itaque ut reprehenderit tenetur corrupti&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 77,
+      &quot;title&quot;: &quot;cupiditate sapiente maiores iusto ducimus cum excepturi veritatis quia&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 78,
+      &quot;title&quot;: &quot;est minima eius possimus ea ratione velit et&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 79,
+      &quot;title&quot;: &quot;ipsa quae voluptas natus ut suscipit soluta quia quidem&quot;
+    },
+    {
+      &quot;user_id&quot;: 8,
+      &quot;id&quot;: 80,
+      &quot;title&quot;: &quot;id nihil reprehenderit&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 81,
+      &quot;title&quot;: &quot;quibusdam sapiente et&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 82,
+      &quot;title&quot;: &quot;recusandae consequatur vel amet unde&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 83,
+      &quot;title&quot;: &quot;aperiam odio fugiat&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 84,
+      &quot;title&quot;: &quot;est et at eos expedita&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 85,
+      &quot;title&quot;: &quot;qui voluptatem consequatur aut ab quis temporibus praesentium&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 86,
+      &quot;title&quot;: &quot;eligendi mollitia alias aspernatur vel ut iusto&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 87,
+      &quot;title&quot;: &quot;aut aut architecto&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 88,
+      &quot;title&quot;: &quot;quas perspiciatis optio&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 89,
+      &quot;title&quot;: &quot;sit optio id voluptatem est eum et&quot;
+    },
+    {
+      &quot;user_id&quot;: 9,
+      &quot;id&quot;: 90,
+      &quot;title&quot;: &quot;est vel dignissimos&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 91,
+      &quot;title&quot;: &quot;repellendus praesentium debitis officiis&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 92,
+      &quot;title&quot;: &quot;incidunt et et eligendi assumenda soluta quia recusandae&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 93,
+      &quot;title&quot;: &quot;nisi qui dolores perspiciatis&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 94,
+      &quot;title&quot;: &quot;quisquam a dolores et earum vitae&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 95,
+      &quot;title&quot;: &quot;consectetur vel rerum qui aperiam modi eos aspernatur ipsa&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 96,
+      &quot;title&quot;: &quot;unde et ut molestiae est molestias voluptatem sint&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 97,
+      &quot;title&quot;: &quot;est quod aut&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 98,
+      &quot;title&quot;: &quot;omnis quia possimus nesciunt deleniti assumenda sed autem&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 99,
+      &quot;title&quot;: &quot;consectetur ut id impedit dolores sit ad ex aut&quot;
+    },
+    {
+      &quot;user_id&quot;: 10,
+      &quot;id&quot;: 100,
+      &quot;title&quot;: &quot;enim repellat iste&quot;
+    }
+  ],
+  &quot;requestTimeStamp&quot;: 1600137496927,
+  &quot;varAuthorization&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME&quot;,
+  &quot;responseCookies&quot;: null,
+  &quot;headerContentType&quot;: &quot;application/json&quot;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print varAuthorization</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details">
+        <pre>21:38:17.444 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def totalIdAlbum = jsonAutenticacion.response.length</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print totalIdAlbum</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>21:38:17.444 [print] 100</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def idAlbum = obtenerIdAlbum(totalIdAlbum)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print idAlbum</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>21:38:17.460 [print] 61.0</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url urlBase + 'albums/' + idAlbum + '/photos'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = varAuthorization</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">608ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details">
+        <pre>21:38:17.460 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums/61/photos
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE0Niwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjAwMTM3NDk3LjMxMywiZXhwIjoxNjAwMTM5Mjk3LjMxM30.H0oc15pAi9vLgdvRiWNzYfuWAqW6afEDHDR0mJ_BRME
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+
+21:38:18.069 response time in milliseconds: 602,28
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 8997
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:18 GMT
+1 &lt; Etag: W/&quot;2325-hpImx609mu+fGa617SOMTfPiGwQ&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+[{&quot;album_id&quot;:61,&quot;id&quot;:3001,&quot;title&quot;:&quot;inventore accusantium labore et quis qui rem exercitationem nesciunt&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2256e3&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2256e3&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3002,&quot;title&quot;:&quot;odit enim est quo quas maiores voluptatem laboriosam&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/cf024f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/cf024f&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3003,&quot;title&quot;:&quot;eos dicta eligendi qui&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/9c2c83&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/9c2c83&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3004,&quot;title&quot;:&quot;sunt tempora numquam&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/39e127&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/39e127&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3005,&quot;title&quot;:&quot;omnis molestiae vel voluptatem ut ut&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/921f69&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/921f69&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3006,&quot;title&quot;:&quot;cum omnis cumque a&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2e7f8d&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2e7f8d&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3007,&quot;title&quot;:&quot;alias temporibus sunt debitis sint consequatur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/7b1c59&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/7b1c59&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3008,&quot;title&quot;:&quot;nostrum nihil optio mollitia non velit voluptatem tenetur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e41d1d&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e41d1d&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3009,&quot;title&quot;:&quot;quia delectus odio alias atque voluptatibus sunt&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a1c5a1&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a1c5a1&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3010,&quot;title&quot;:&quot;omnis quas debitis officiis ea veritatis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a46ded&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a46ded&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3011,&quot;title&quot;:&quot;nisi eos unde inventore repellat accusamus quae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/544af8&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/544af8&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3012,&quot;title&quot;:&quot;molestias sit impedit sit unde ut quo dolor&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/69282&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/69282&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3013,&quot;title&quot;:&quot;perferendis molestiae illo&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/197cfb&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/197cfb&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3014,&quot;title&quot;:&quot;sed quibusdam recusandae quo quas itaque sit repellendus&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e70e16&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e70e16&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3015,&quot;title&quot;:&quot;molestiae molestias iure ex illo&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8e888a&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8e888a&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3016,&quot;title&quot;:&quot;ratione blanditiis dolorem nulla consequatur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/3f016&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/3f016&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3017,&quot;title&quot;:&quot;modi illum enim dolorem nostrum tenetur est ut et&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e1dec0&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e1dec0&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3018,&quot;title&quot;:&quot;soluta reiciendis enim nesciunt recusandae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/78837&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/78837&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3019,&quot;title&quot;:&quot;voluptatem omnis enim molestiae impedit quod et itaque dolorum&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/6f5185&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/6f5185&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3020,&quot;title&quot;:&quot;consequatur fuga dicta totam ipsam ut dolore&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/12bae3&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/12bae3&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3021,&quot;title&quot;:&quot;quos id et cupiditate voluptatem veniam eos veritatis&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/3283be&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/3283be&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3022,&quot;title&quot;:&quot;error assumenda quasi blanditiis enim&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8d1767&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8d1767&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3023,&quot;title&quot;:&quot;delectus error impedit aut id perferendis commodi laboriosam odio&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/d55fe6&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/d55fe6&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3024,&quot;title&quot;:&quot;et in maxime ea qui placeat&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a4946&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a4946&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3025,&quot;title&quot;:&quot;ratione quia et dolores rerum&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/374662&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/374662&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3026,&quot;title&quot;:&quot;autem autem quia praesentium excepturi non&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/5d03eb&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/5d03eb&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3027,&quot;title&quot;:&quot;consectetur nobis dolorum quibusdam&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/c8002f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/c8002f&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3028,&quot;title&quot;:&quot;culpa ut qui a qui voluptatem&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/73695f&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/73695f&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3029,&quot;title&quot;:&quot;repellendus est nihil autem fuga esse et&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a6cbce&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a6cbce&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3030,&quot;title&quot;:&quot;quia architecto nemo itaque illum reiciendis quos dolor&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a4b7a4&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a4b7a4&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3031,&quot;title&quot;:&quot;rerum quia autem voluptatibus&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/e51316&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/e51316&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3032,&quot;title&quot;:&quot;alias ut sequi sit ipsa&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/d1207b&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/d1207b&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3033,&quot;title&quot;:&quot;facere id dolorem accusantium&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/79a36c&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/79a36c&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3034,&quot;title&quot;:&quot;est natus beatae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/f1296b&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/f1296b&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3035,&quot;title&quot;:&quot;itaque ullam consequatur omnis ut et voluptatibus&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/d09b04&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/d09b04&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3036,&quot;title&quot;:&quot;aut dolorum tempore laboriosam modi quaerat quia&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/3fc5be&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/3fc5be&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3037,&quot;title&quot;:&quot;qui ut ea autem eum&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a97b71&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a97b71&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3038,&quot;title&quot;:&quot;facilis repellendus porro sed debitis facere sit&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/343b78&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/343b78&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3039,&quot;title&quot;:&quot;vero iste enim et accusamus animi doloremque tenetur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a0e6ba&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a0e6ba&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3040,&quot;title&quot;:&quot;porro earum et eos&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8432b9&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8432b9&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3041,&quot;title&quot;:&quot;voluptas ipsum cumque dolore nihil aliquam dolor non&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/cc0a7&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/cc0a7&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3042,&quot;title&quot;:&quot;numquam fugit ut ea dolor aspernatur&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/8e2fc7&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/8e2fc7&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3043,&quot;title&quot;:&quot;dolorum veritatis recusandae&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/3db3a&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/3db3a&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3044,&quot;title&quot;:&quot;eos eveniet recusandae neque doloribus ut&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/2fa65c&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/2fa65c&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3045,&quot;title&quot;:&quot;eligendi molestiae praesentium&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/6e83e1&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/6e83e1&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3046,&quot;title&quot;:&quot;commodi libero dignissimos ea vero&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/18dfa0&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/18dfa0&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3047,&quot;title&quot;:&quot;incidunt aut tempora quia sunt doloribus reprehenderit distinctio&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/fac30a&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/fac30a&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3048,&quot;title&quot;:&quot;sapiente quia architecto&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/6358fc&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/6358fc&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3049,&quot;title&quot;:&quot;enim quae ducimus labore numquam&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/fcf750&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/fcf750&quot;},{&quot;album_id&quot;:61,&quot;id&quot;:3050,&quot;title&quot;:&quot;commodi et odio ratione&quot;,&quot;url&quot;:&quot;https://via.placeholder.com/600/a9eee&quot;,&quot;thumbnail_url&quot;:&quot;https://via.placeholder.com/150/a9eee&quot;}]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>21:38:18.076 [print] [
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3001,
+    &quot;title&quot;: &quot;inventore accusantium labore et quis qui rem exercitationem nesciunt&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2256e3&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2256e3&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3002,
+    &quot;title&quot;: &quot;odit enim est quo quas maiores voluptatem laboriosam&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/cf024f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/cf024f&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3003,
+    &quot;title&quot;: &quot;eos dicta eligendi qui&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/9c2c83&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/9c2c83&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3004,
+    &quot;title&quot;: &quot;sunt tempora numquam&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/39e127&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/39e127&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3005,
+    &quot;title&quot;: &quot;omnis molestiae vel voluptatem ut ut&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/921f69&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/921f69&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3006,
+    &quot;title&quot;: &quot;cum omnis cumque a&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2e7f8d&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2e7f8d&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3007,
+    &quot;title&quot;: &quot;alias temporibus sunt debitis sint consequatur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/7b1c59&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/7b1c59&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3008,
+    &quot;title&quot;: &quot;nostrum nihil optio mollitia non velit voluptatem tenetur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e41d1d&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e41d1d&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3009,
+    &quot;title&quot;: &quot;quia delectus odio alias atque voluptatibus sunt&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a1c5a1&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a1c5a1&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3010,
+    &quot;title&quot;: &quot;omnis quas debitis officiis ea veritatis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a46ded&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a46ded&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3011,
+    &quot;title&quot;: &quot;nisi eos unde inventore repellat accusamus quae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/544af8&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/544af8&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3012,
+    &quot;title&quot;: &quot;molestias sit impedit sit unde ut quo dolor&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/69282&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/69282&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3013,
+    &quot;title&quot;: &quot;perferendis molestiae illo&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/197cfb&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/197cfb&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3014,
+    &quot;title&quot;: &quot;sed quibusdam recusandae quo quas itaque sit repellendus&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e70e16&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e70e16&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3015,
+    &quot;title&quot;: &quot;molestiae molestias iure ex illo&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8e888a&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8e888a&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3016,
+    &quot;title&quot;: &quot;ratione blanditiis dolorem nulla consequatur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/3f016&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/3f016&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3017,
+    &quot;title&quot;: &quot;modi illum enim dolorem nostrum tenetur est ut et&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e1dec0&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e1dec0&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3018,
+    &quot;title&quot;: &quot;soluta reiciendis enim nesciunt recusandae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/78837&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/78837&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3019,
+    &quot;title&quot;: &quot;voluptatem omnis enim molestiae impedit quod et itaque dolorum&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/6f5185&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/6f5185&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3020,
+    &quot;title&quot;: &quot;consequatur fuga dicta totam ipsam ut dolore&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/12bae3&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/12bae3&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3021,
+    &quot;title&quot;: &quot;quos id et cupiditate voluptatem veniam eos veritatis&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/3283be&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/3283be&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3022,
+    &quot;title&quot;: &quot;error assumenda quasi blanditiis enim&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8d1767&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8d1767&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3023,
+    &quot;title&quot;: &quot;delectus error impedit aut id perferendis commodi laboriosam odio&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/d55fe6&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/d55fe6&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3024,
+    &quot;title&quot;: &quot;et in maxime ea qui placeat&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a4946&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a4946&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3025,
+    &quot;title&quot;: &quot;ratione quia et dolores rerum&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/374662&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/374662&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3026,
+    &quot;title&quot;: &quot;autem autem quia praesentium excepturi non&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/5d03eb&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/5d03eb&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3027,
+    &quot;title&quot;: &quot;consectetur nobis dolorum quibusdam&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/c8002f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/c8002f&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3028,
+    &quot;title&quot;: &quot;culpa ut qui a qui voluptatem&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/73695f&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/73695f&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3029,
+    &quot;title&quot;: &quot;repellendus est nihil autem fuga esse et&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a6cbce&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a6cbce&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3030,
+    &quot;title&quot;: &quot;quia architecto nemo itaque illum reiciendis quos dolor&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a4b7a4&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a4b7a4&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3031,
+    &quot;title&quot;: &quot;rerum quia autem voluptatibus&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/e51316&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/e51316&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3032,
+    &quot;title&quot;: &quot;alias ut sequi sit ipsa&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/d1207b&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/d1207b&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3033,
+    &quot;title&quot;: &quot;facere id dolorem accusantium&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/79a36c&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/79a36c&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3034,
+    &quot;title&quot;: &quot;est natus beatae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/f1296b&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/f1296b&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3035,
+    &quot;title&quot;: &quot;itaque ullam consequatur omnis ut et voluptatibus&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/d09b04&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/d09b04&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3036,
+    &quot;title&quot;: &quot;aut dolorum tempore laboriosam modi quaerat quia&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/3fc5be&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/3fc5be&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3037,
+    &quot;title&quot;: &quot;qui ut ea autem eum&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a97b71&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a97b71&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3038,
+    &quot;title&quot;: &quot;facilis repellendus porro sed debitis facere sit&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/343b78&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/343b78&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3039,
+    &quot;title&quot;: &quot;vero iste enim et accusamus animi doloremque tenetur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a0e6ba&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a0e6ba&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3040,
+    &quot;title&quot;: &quot;porro earum et eos&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8432b9&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8432b9&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3041,
+    &quot;title&quot;: &quot;voluptas ipsum cumque dolore nihil aliquam dolor non&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/cc0a7&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/cc0a7&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3042,
+    &quot;title&quot;: &quot;numquam fugit ut ea dolor aspernatur&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/8e2fc7&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/8e2fc7&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3043,
+    &quot;title&quot;: &quot;dolorum veritatis recusandae&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/3db3a&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/3db3a&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3044,
+    &quot;title&quot;: &quot;eos eveniet recusandae neque doloribus ut&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/2fa65c&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/2fa65c&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3045,
+    &quot;title&quot;: &quot;eligendi molestiae praesentium&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/6e83e1&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/6e83e1&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3046,
+    &quot;title&quot;: &quot;commodi libero dignissimos ea vero&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/18dfa0&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/18dfa0&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3047,
+    &quot;title&quot;: &quot;incidunt aut tempora quia sunt doloribus reprehenderit distinctio&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/fac30a&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/fac30a&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3048,
+    &quot;title&quot;: &quot;sapiente quia architecto&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/6358fc&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/6358fc&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3049,
+    &quot;title&quot;: &quot;enim quae ducimus labore numquam&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/fcf750&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/fcf750&quot;
+  },
+  {
+    &quot;album_id&quot;: 61,
+    &quot;id&quot;: 3050,
+    &quot;title&quot;: &quot;commodi et odio ratione&quot;,
+    &quot;thumbnail_url&quot;: &quot;https://via.placeholder.com/150/a9eee&quot;,
+    &quot;url&quot;: &quot;https://via.placeholder.com/600/a9eee&quot;
+  }
+]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def objeto = read('../json/formato_fotos.json')</span>
+  
+  <span class="lead-duration duration">049ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match each response contains objeto</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-28" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-29" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>21:38:16.283 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 969ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Listar albumes escenario alterno</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-32">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')</span>
+  
+  <span class="lead-duration duration">751ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">src/test/resources/feature/autenticar_usuario.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def urlBase = 'https://nodejs-qa-training.herokuapp.com/'</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def headerContentType = 'application/json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">json jsonLogin = {&quot;email&quot;: hernan00@wolox.com.ar, &quot;password&quot;: Hernan123}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase + 'users/sessions/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request jsonLogin</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">713ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>21:38:16.294 request:
+1 &gt; POST https://nodejs-qa-training.herokuapp.com/users/sessions/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 56
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+{&quot;email&quot;:&quot;hernan00@wolox.com.ar&quot;,&quot;password&quot;:&quot;Hernan123&quot;}
+
+21:38:17.005 response time in milliseconds: 710,76
+1 &lt; 200
+1 &lt; Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTcuNDQ5LCJleHAiOjE2MDAxMzkyOTcuNDQ5fQ.Tihc-f-dbmJJL90Uc1lt0_dljXnuWzBVZyaU1q5xGXU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:17 GMT
+1 &lt; Etag: W/&quot;33-XLy8hA4htjGHkke63MHFKzO95PM&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;user_id&quot;:258,&quot;token_expires_at&quot;:&quot;1600139297.449&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>21:38:17.005 [print] {
+  &quot;token_expires_at&quot;: &quot;1600139297.449&quot;,
+  &quot;user_id&quot;: 258
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print responseHeaders['Authorization'][0]</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-35">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details">
+        <pre>21:38:17.005 [print] eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjI1OCwicm9sZSI6InJlZ3VsYXIiLCJpYXQiOjE2MDAxMzc0OTcuNDQ5LCJleHAiOjE2MDAxMzkyOTcuNDQ5fQ.Tihc-f-dbmJJL90Uc1lt0_dljXnuWzBVZyaU1q5xGXU</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response.user_id == &quot;#number&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response contains read('../json/formato_autenticacion.json')</span>
+  
+  <span class="lead-duration duration">019ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match responseHeaders['Authorization'][0] == &quot;#notnull&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url urlBase + 'albums'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Content-Type = headerContentType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = 'kadjADAhOLAIyysfhkalsdHKLsdASDADGDFGJD'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">466ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>21:38:17.037 request:
+1 &gt; GET https://nodejs-qa-training.herokuapp.com/albums
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: kadjADAhOLAIyysfhkalsdHKLsdASDADGDFGJD
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Host: nodejs-qa-training.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_171)
+
+21:38:17.502 response time in milliseconds: 464,28
+1 &lt; 401
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 109
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Tue, 15 Sep 2020 02:38:17 GMT
+1 &lt; Etag: W/&quot;6d-t3VucJlhTF9S+bSwM/azXM1mtck&quot;
+1 &lt; Server: Cowboy
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;errors&quot;:[{&quot;code&quot;:&quot;authentication_error&quot;,&quot;message&quot;:&quot;Invalid token&quot;}],&quot;timestamp&quot;:&quot;2020-09-15T02:38:17.952Z&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 401</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response contains read('../json/formato_error.json')</span>
+  
+  <span class="lead-duration duration">012ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

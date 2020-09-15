@@ -1,0 +1,83 @@
+<testsuite failures="0" name="src/test/resources/feature/autenticar_usuario.feature" skipped="0" tests="3" time="7.879991">
+  <testcase classname="src.test.resources.feature.autenticar_usuario" name="Autenticacion exitosa con usuario Regular" time="3.831705">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123} . passed
+Given url urlBase + 'users/sessions/' ..................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print responseHeaders['Authorization'][0] ............................... passed
+And match response.user_id == "#number" ................................... passed
+And match response contains read('../json/formato_autenticacion.json') .... passed
+And match responseHeaders['Authorization'][0] == "#notnull" ............... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.autenticar_usuario" name="Autenticacion exitosa con usuario Administrador" time="3.317316">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123} . passed
+Given url urlBase + 'users/sessions/' ..................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print responseHeaders['Authorization'][0] ............................... passed
+And match response.user_id == "#number" ................................... passed
+And match response contains read('../json/formato_autenticacion.json') .... passed
+And match responseHeaders['Authorization'][0] == "#notnull" ............... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": admin@wolox.com.ar, "password": candidatoWolox2020} . passed
+Given url urlBase + 'users/sessions/' ..................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print responseHeaders['Authorization'][0] ............................... passed
+And match response.user_id == "#number" ................................... passed
+And match response contains read('../json/formato_autenticacion.json') .... passed
+And match responseHeaders['Authorization'][0] == "#notnull" ............... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.autenticar_usuario" name="Autenticacion de usuario fallida" time="0.730969">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": hernan00@wolox.com.ar, "password": Hernan123} . passed
+Given url urlBase + 'users/sessions/' ..................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print responseHeaders['Authorization'][0] ............................... passed
+And match response.user_id == "#number" ................................... passed
+And match response contains read('../json/formato_autenticacion.json') .... passed
+And match responseHeaders['Authorization'][0] == "#notnull" ............... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": admin@wolox.com.ar, "password": candidatoWolox2020} . passed
+Given url urlBase + 'users/sessions/' ..................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print responseHeaders['Authorization'][0] ............................... passed
+And match response.user_id == "#number" ................................... passed
+And match response contains read('../json/formato_autenticacion.json') .... passed
+And match responseHeaders['Authorization'][0] == "#notnull" ............... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* json jsonLogin = {"email": inexistente@wolox.com.ar, "password": Hernan123} . passed
+Given url urlBase + 'users/sessions' ...................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonLogin ..................................................... passed
+When method post .......................................................... passed
+Then status 401 ........................................................... passed
+* print response .......................................................... passed
+And match response contains read('../json/formato_error.json') ............ passed</system-out>
+  </testcase>
+</testsuite>
