@@ -32,6 +32,7 @@ Feature: Prueba listar albumes
     * def objeto = read('../json/formato_albumes.json')
     And match each response contains objeto
 
+    @Alterno
   Scenario: Listar albumes escenario alterno
     * def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')
     Given url urlBase + 'albums'

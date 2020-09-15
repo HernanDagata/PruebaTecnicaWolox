@@ -12,9 +12,9 @@ repositories {
 }
 
 dependencies {
-    testCompile 'com.intuit.karate:karate-junit4:0.9.4'
-    testCompile 'com.intuit.karate:karate-apache:0.9.4'
-    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.2.4'
-    compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    testCompile group: 'com.intuit.karate', name: 'karate-junit4', version: '0.9.5'
+    testCompile group: 'com.intuit.karate', name: 'karate-apache', version: '0.9.5'
+    compile group: 'net.masterthought', name: 'cucumber-reporting', version: '3.8.0'
 }
+
+gradle.startParameter.continueOnFailure = true

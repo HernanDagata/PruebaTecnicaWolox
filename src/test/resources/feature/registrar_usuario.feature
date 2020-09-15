@@ -28,7 +28,7 @@ Feature: Prueba registro de usuario
 
     Examples:
       | newUserMail            | newUserPassword | newUserFirstName | newUserLastName | statusCode | resultadoEsperado     |
-      | hernan0 0@wolox.com.ar | Hernan123       | Hernan           | Garcia          | 201        | {user_id: '#notnull'} |
+      | hernan0w0@wolox.com.ar | Hernan123       | Hernan           | Garcia          | 201        | {user_id: '#notnull'} |
 
   Scenario Outline: Registro de usuario escenarios alternos
     * def jsonUsuario =
@@ -51,7 +51,7 @@ Feature: Prueba registro de usuario
 
     Examples:
       | newUserMail            | newUserPassword | newUserFirstName | newUserLastName | statusCode | resultadoEsperado                                      |
-      | hernan001@wolox.com.co | Herna1**        | Hernan           | Garcia          | 422        | "The email must be @wolox.com.ar"                      |
-      | hernan002@wolox.com.ar | Herna1**        | Hernan01         | Garcia          | 422        | "firstName"                                            |
-      | hernan003@wolox.com.ar | Herna1**        | Hernan           | Garcia98        | 422        | "lastName"                                             |
-      | hernan000@wolox.com.ar | Herna1**        | Hernan           | Garcia          | 422        | "The resource you are trying to create already exists" |
+      | hernan0w1@wolox.com.co | Herna1**        | Hernan           | Garcia          | 422        | "The email must be @wolox.com.ar"                      |
+      | hernan0w2@wolox.com.ar | Herna1**        | Hernan01         | Garcia          | 422        | "firstName"                                            |
+      | hernan0w3@wolox.com.ar | Herna1**        | Hernan           | Garcia98        | 422        | "lastName"                                             |
+      | hernan0w0@wolox.com.ar | Herna1**        | Hernan           | Garcia          | 422        | "The resource you are trying to create already exists" |

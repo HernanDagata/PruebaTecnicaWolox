@@ -8,7 +8,7 @@ Feature: Prueba Invalidar sesion del usuario
     * def urlBase = 'https://nodejs-qa-training.herokuapp.com/'
     * def headerContentType = 'application/json'
 
-  @ExitosoRegular
+  @Invalidar
   Scenario: Invalidar sesion usuario regular
     * def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular')
     * def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]
@@ -25,7 +25,7 @@ Feature: Prueba Invalidar sesion del usuario
     Then status 401
     And match response contains read('../json/formato_error.json')
 
-  @ExitosoAdministrador
+  @Invalidar
   Scenario: Invalidar sesion usuario administrador
     * def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoAdministrador')
     * def varAuthorization = jsonAutenticacion.responseHeaders.Authorization[0]

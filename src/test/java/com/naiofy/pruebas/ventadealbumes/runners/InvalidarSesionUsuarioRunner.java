@@ -1,10 +1,11 @@
 package com.naiofy.pruebas.ventadealbumes.runners;
 
-import cucumber.api.CucumberOptions;
+import com.intuit.karate.KarateOptions;
+import com.intuit.karate.junit4.Karate;
 import org.junit.runner.RunWith;
 
-@RunWith(com.intuit.karate.junit4.Karate.class)
-@CucumberOptions(features = "src/test/resources/feature/invalidar_sesion_usuario.feature")
+@RunWith(Karate.class)
+@KarateOptions(features = "src/test/resources/feature/invalidar_sesion_usuario.feature")
 
 public class InvalidarSesionUsuarioRunner {
 }

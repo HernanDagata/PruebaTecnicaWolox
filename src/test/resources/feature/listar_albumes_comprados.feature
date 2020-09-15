@@ -8,6 +8,7 @@ Feature: Prueba listar los albumes comprados
     * def urlBase = 'https://nodejs-qa-training.herokuapp.com/'
     * def headerContentType = 'application/json'
 
+  @ExitosoRegular
   Scenario: Listar albumes con usuario regular exitoso
     * def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular')
     * def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0]
@@ -22,6 +23,7 @@ Feature: Prueba listar los albumes comprados
     * def objeto = read('../json/formato_albumes_comprados.json')
     And match each response contains objeto
 
+  @ExitosoAdministrador
   Scenario: Listar albumes con usuario administrador exitoso
     * def jsonAutenticacion = call read('listar_albumes.feature@ExitosoAdministrador')
     * def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0]
@@ -36,6 +38,7 @@ Feature: Prueba listar los albumes comprados
     * def objeto = read('../json/formato_albumes_comprados.json')
     And match each response contains objeto
 
+  @Alterno
   Scenario: Listar albumes con usuario administrador alterno
     * def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular')
     * def idUsuario = jsonAutenticacion.jsonAutenticacion.response.user_id

@@ -1,0 +1,103 @@
+<testsuite failures="0" name="src/test/resources/feature/listar_fotos_album.feature" skipped="0" tests="3" time="5.25652">
+  <testcase classname="src.test.resources.feature.listar_fotos_album" name="Listar albumes con usuario regular exitoso" time="2.074201">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular') . passed
+* def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0] . passed
+* def totalIdAlbum = jsonAutenticacion.response.length .................... passed
+* def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) } . passed
+* def idAlbum = obtenerIdAlbum(totalIdAlbum) .............................. passed
+* print idAlbum ........................................................... passed
+Given url urlBase + 'albums/' + idAlbum + '/photos' ....................... passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = varAuthorization ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def objeto = read('../json/formato_fotos.json') ......................... passed
+And match each response contains objeto ................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.listar_fotos_album" name="Listar albumes con usuario administrador exitoso" time="1.950828">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular') . passed
+* def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0] . passed
+* def totalIdAlbum = jsonAutenticacion.response.length .................... passed
+* def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) } . passed
+* def idAlbum = obtenerIdAlbum(totalIdAlbum) .............................. passed
+* print idAlbum ........................................................... passed
+Given url urlBase + 'albums/' + idAlbum + '/photos' ....................... passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = varAuthorization ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def objeto = read('../json/formato_fotos.json') ......................... passed
+And match each response contains objeto ................................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('listar_albumes.feature@ExitosoAdministrador') . passed
+* print jsonAutenticacion ................................................. passed
+* def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0] . passed
+* print varAuthorization .................................................. passed
+* def totalIdAlbum = jsonAutenticacion.response.length .................... passed
+* print totalIdAlbum ...................................................... passed
+* def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) } . passed
+* def idAlbum = obtenerIdAlbum(totalIdAlbum) .............................. passed
+* print idAlbum ........................................................... passed
+Given url urlBase + 'albums/' + idAlbum + '/photos' ....................... passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = varAuthorization ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def objeto = read('../json/formato_fotos.json') ......................... passed
+And match each response contains objeto ................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.listar_fotos_album" name="Listar albumes escenario alterno" time="1.231491">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('listar_albumes.feature@ExitosoRegular') . passed
+* def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0] . passed
+* def totalIdAlbum = jsonAutenticacion.response.length .................... passed
+* def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) } . passed
+* def idAlbum = obtenerIdAlbum(totalIdAlbum) .............................. passed
+* print idAlbum ........................................................... passed
+Given url urlBase + 'albums/' + idAlbum + '/photos' ....................... passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = varAuthorization ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def objeto = read('../json/formato_fotos.json') ......................... passed
+And match each response contains objeto ................................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('listar_albumes.feature@ExitosoAdministrador') . passed
+* print jsonAutenticacion ................................................. passed
+* def varAuthorization = jsonAutenticacion.jsonAutenticacion.responseHeaders.Authorization[0] . passed
+* print varAuthorization .................................................. passed
+* def totalIdAlbum = jsonAutenticacion.response.length .................... passed
+* print totalIdAlbum ...................................................... passed
+* def obtenerIdAlbum = function(max) { return Math.floor(Math.random() * max) } . passed
+* def idAlbum = obtenerIdAlbum(totalIdAlbum) .............................. passed
+* print idAlbum ........................................................... passed
+Given url urlBase + 'albums/' + idAlbum + '/photos' ....................... passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = varAuthorization ............................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def objeto = read('../json/formato_fotos.json') ......................... passed
+And match each response contains objeto ................................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonAutenticacion = call read('autenticar_usuario.feature@ExitosoRegular') . passed
+Given url urlBase + 'albums' .............................................. passed
+And header Content-Type = headerContentType ............................... passed
+And header Authorization = 'kadjADAhOLAIyysfhkalsdHKLsdASDADGDFGJD' ....... passed
+When method get ........................................................... passed
+Then status 401 ........................................................... passed
+And match response contains read('../json/formato_error.json') ............ passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,197 @@
+<testsuite failures="2" name="src/test/resources/feature/registrar_usuario.feature" skipped="0" tests="5" time="3.808804">
+  <testcase classname="src.test.resources.feature.registrar_usuario" name="Registro de usuario exitoso" time="0.631435">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print response .......................................................... passed
+And match response contains {user_id: '#notnull'} ......................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.registrar_usuario" name="Registro de usuario escenarios alternos" time="0.651621">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print response .......................................................... passed
+And match response contains {user_id: '#notnull'} ......................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... passed
+* print response .......................................................... passed
+And match response == read('../json/formato_error.json') .................. passed
+And match response.errors[0].message contains "The email must be @wolox.com.ar" . passed</system-out>
+  </testcase>
+  <testcase classname="src.test.resources.feature.registrar_usuario" name="Registro de usuario escenarios alternos" time="0.825629">
+    <failure message="registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 820, url: https://nodejs-qa-training.herokuapp.com/users, response: {&quot;user_id&quot;:300}">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print response .......................................................... passed
+And match response contains {user_id: '#notnull'} ......................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... passed
+* print response .......................................................... passed
+And match response == read('../json/formato_error.json') .................. passed
+And match response.errors[0].message contains "The email must be @wolox.com.ar" . passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 820, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":300}&#13;
+	at ✽.Then status 422 (registrar_usuario.feature:47)&#13;
+
+* print response .......................................................... skipped
+And match response == read('../json/formato_error.json') .................. skipped
+And match response.errors[0].message contains "firstName" ................. skipped</failure>
+  </testcase>
+  <testcase classname="src.test.resources.feature.registrar_usuario" name="Registro de usuario escenarios alternos" time="0.855322">
+    <failure message="registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 849, url: https://nodejs-qa-training.herokuapp.com/users, response: {&quot;user_id&quot;:301}">* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print response .......................................................... passed
+And match response contains {user_id: '#notnull'} ......................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... passed
+* print response .......................................................... passed
+And match response == read('../json/formato_error.json') .................. passed
+And match response.errors[0].message contains "The email must be @wolox.com.ar" . passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 820, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":300}&#13;
+	at ✽.Then status 422 (registrar_usuario.feature:47)&#13;
+
+* print response .......................................................... skipped
+And match response == read('../json/formato_error.json') .................. skipped
+And match response.errors[0].message contains "firstName" ................. skipped
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 849, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":301}&#13;
+	at ✽.Then status 422 (registrar_usuario.feature:47)&#13;
+
+* print response .......................................................... skipped
+And match response == read('../json/formato_error.json') .................. skipped
+And match response.errors[0].message contains "lastName" .................. skipped</failure>
+  </testcase>
+  <testcase classname="src.test.resources.feature.registrar_usuario" name="Registro de usuario escenarios alternos" time="0.844797">
+    <system-out>* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print response .......................................................... passed
+And match response contains {user_id: '#notnull'} ......................... passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... passed
+* print response .......................................................... passed
+And match response == read('../json/formato_error.json') .................. passed
+And match response.errors[0].message contains "The email must be @wolox.com.ar" . passed
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 820, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":300}&#13;
+	at ✽.Then status 422 (registrar_usuario.feature:47)&#13;
+
+* print response .......................................................... skipped
+And match response == read('../json/formato_error.json') .................. skipped
+And match response.errors[0].message contains "firstName" ................. skipped
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: registrar_usuario.feature:47 - status code was: 201, expected: 422, response time: 849, url: https://nodejs-qa-training.herokuapp.com/users, response: {"user_id":301}&#13;
+	at ✽.Then status 422 (registrar_usuario.feature:47)&#13;
+
+* print response .......................................................... skipped
+And match response == read('../json/formato_error.json') .................. skipped
+And match response.errors[0].message contains "lastName" .................. skipped
+* def urlBase = 'https://nodejs-qa-training.herokuapp.com/' ............... passed
+* def headerContentType = 'application/json' .............................. passed
+* def jsonUsuario = ....................................................... passed
+Given url urlBase + 'users' ............................................... passed
+And header Content-Type = headerContentType ............................... passed
+And request jsonUsuario ................................................... passed
+When method post .......................................................... passed
+Then status 422 ........................................................... passed
+* print response .......................................................... passed
+And match response == read('../json/formato_error.json') .................. passed
+And match response.errors[0].message contains "The resource you are trying to create already exists" . passed</system-out>
+  </testcase>
+</testsuite>
